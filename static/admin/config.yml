@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: AustinGreen/gatsby-netlify-cms-boilerplate # Path to your Github repository
-  branch: master # Branch to update
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
 
 media_folder: "/static"
 
