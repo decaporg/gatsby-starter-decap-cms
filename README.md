@@ -1,13 +1,19 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Gatsby + Netlify CMS Boilerplate
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+This project is hosted on Netlify: https://gatsby-netlify-cms.netlify.com/
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+## Adding Netlify CMS to Gatsby Project
+- Go to the admin directory
 ```
-gatsby new gatsby-example-site
+$ cd static/admin/config.yml
 ```
+- Edit Line 3
+```
+repo: [YOUR_USERNAME]/[YOUR_REPO] # Path to your Github repository
+```
+- Follow these instructions ([Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/)) for a custom setup.
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## To Dos
+- [ ] Register a custom widget to save frontmatter data values as strings
+- [ ] Netlify authentication
+- [ ] Images
