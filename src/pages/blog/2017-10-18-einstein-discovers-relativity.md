@@ -8,4 +8,4 @@ In 1905, **Albert Einstein** determined that the laws of physics are the same fo
 
 
 
-![einstein](/static/440px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg)
+![einstein](/img/einstein.jpg)
