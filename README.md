@@ -10,7 +10,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 - Node (I recommend using v8.7.0 or higher)
 - Yarn
-- A clone of the repo on your local machine
+- A fork of the repo on your local machine
 
 ### Run Locally
 ```
