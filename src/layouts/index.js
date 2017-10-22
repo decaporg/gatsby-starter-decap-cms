@@ -7,15 +7,24 @@ import 'bulma';
 
 const Navbar = () => (
   <nav className="navbar is-light">
-    <div className="navbar-brand">
-      <Link to="/" className="navbar-item">
-        Gatsby powered by Netlify CMS
-      </Link>
-      <a className="navbar-item" href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate" target="_blank">
-        <span className="icon">
-          <img src={github} alt="Github" />
-        </span>
-      </a>
+    <div className="container">
+      <div className="navbar-brand">
+        <Link to="/" className="navbar-item">
+          Gatsby powered by Netlify CMS
+        </Link>
+      </div>
+      <div className="navbar-start">
+        <Link className="navbar-item" to="/about">
+          About
+        </Link>
+      </div>
+      <div className="navbar-end">
+        <a className="navbar-item" href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate" target="_blank">
+          <span className="icon">
+            <img src={github} alt="Github" />
+          </span>
+        </a>
+      </div>
     </div>
   </nav>
 );
