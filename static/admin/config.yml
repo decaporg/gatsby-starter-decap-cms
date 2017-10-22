@@ -27,3 +27,4 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "about"}
       - {label: "Path", name: "path", widget: "hidden", default: "/about"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

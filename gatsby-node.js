@@ -16,9 +16,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               date
               title
-              aboutData {
-                paragraph
-              }
             }
           }
         }

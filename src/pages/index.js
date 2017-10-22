@@ -7,7 +7,7 @@ export default function Index({ data }) {
   return (
     <section className="section">
       <div className="container">
-        {posts.filter(post => post.node.frontmatter.title.length > 0).map(({ node: post }) => {
+        {posts.filter(post => post.node.frontmatter.templateKey === 'blog-post').map(({ node: post }) => {
           return (
             <div className="content" style={{ border: '1px solid #eaecee', padding: '2em 4em' }} key={post.id}>
               <p>
@@ -40,6 +40,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
+            templateKey
             date(formatString: "MMMM DD, YYYY")
             path
           }
