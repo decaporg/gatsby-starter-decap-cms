@@ -8,17 +8,17 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 ### Prerequisites
 
-- Node (I recommend using v8.7.0 or higher)
+- Node (I recommend using v8.2.0 or higher)
 - Yarn
-- A clone of the repo on your local machine
+- Gatsby CLI
 
 ### Run Locally
 ```
-$ cd gatsby-netlify-cms-boilerplate
-$ yarn
+gatsby new [SITE_DIRECTORY_NAME] https://github.com/AustinGreen/gatsby-starter-netlify-cms/
+$ cd [SITE_DIRECTORY_NAME]
 $ gatsby build
 $ gatsby serve
 ```
 
 ## Accessing the CMS
-Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/) to set up authentication, and content modeling.
+Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
