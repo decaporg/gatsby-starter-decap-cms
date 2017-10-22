@@ -2,7 +2,6 @@ import React from 'react';
 
 export default ({ data }) => (
   <section className="section section--gradient">
-    {console.log(data)}
     <div className="container">
       <div className="columns">
         <div className="column is-7">
