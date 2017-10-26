@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "gatsby-starter-netlify-cms",
+  "description": "Example Gatsby, and Netlify CMS project",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.6.0",
     "gatsby": "^1.9.63",
