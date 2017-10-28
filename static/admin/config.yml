@@ -21,7 +21,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/about"
+      - file: "src/pages/about/about.md"
         label: "About"
         name: "about"
         fields:
@@ -29,7 +29,7 @@ collections:
           - {label: "Path", name: "path", widget: "hidden", default: "/about"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/product"
+      - file: "src/pages/product/product.md"
         label: "Products Page"
         name: "products"
         fields:
