@@ -8,8 +8,8 @@ export default class IndexPage extends React.Component {
       console.log('Listener added');
       window.netlifyIdentity.on('init', user => {
         if (!user) {
+          console.log('Redirect to admin');
           window.netlifyIdentity.on('login', () => {
-            console.log('Redirect to admin');
             document.location.href = '/admin/';
           });
         }
