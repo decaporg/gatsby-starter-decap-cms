@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import github from '../img/github-icon.svg';
 import 'bulma';
+import './index.css';
 
 const Navbar = () => (
   <nav className="navbar is-light">
