@@ -41,7 +41,6 @@ export default ({ data }) => {
             </div>
             <h2>{frontmatter.pricing.heading}</h2>
             <p>{frontmatter.pricing.description}</p>
-            {console.log(frontmatter.pricing.plans)}
             <Pricing data={frontmatter.pricing.plans} />
           </div>
         </div>

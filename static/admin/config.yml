@@ -21,11 +21,9 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - name: "about"
+      - file: "src/pages/about"
         label: "About"
-        folder: "src/pages/about"
-        create: false
-        slug: "{{slug}}"
+        name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Path", name: "path", widget: "hidden", default: "/about"}
@@ -34,7 +32,6 @@ collections:
       - file: "src/pages/product"
         label: "Products Page"
         name: "products"
-        create: false
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "products-page"}
           - {label: Title, name: title, widget: string}
