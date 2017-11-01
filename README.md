@@ -33,6 +33,7 @@ npm install --global --production windows-build-tools
 ```
 
 [Full details here](https://www.npmjs.com/package/node-gyp 'NPM node-gyp page')
+
 ## Take a Test Drive
 Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. Our example here is the Kaldi coffee company template. Use the button below to build and deploy your own copy of the repository:
 
