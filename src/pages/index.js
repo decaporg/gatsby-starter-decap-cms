@@ -24,6 +24,9 @@ export default class IndexPage extends React.Component {
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Helmet>
         <div className="container">
+          <div className="content">
+            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+          </div>
           {posts.filter(post => post.node.frontmatter.templateKey === 'blog-post').map(({ node: post }) => {
             return (
               <div className="content" style={{ border: '1px solid #eaecee', padding: '2em 4em' }} key={post.id}>
@@ -38,8 +41,8 @@ export default class IndexPage extends React.Component {
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button is-primary is-small" to={post.frontmatter.path}>
-                    Keep Reading
+                  <Link className="button is-small" to={post.frontmatter.path}>
+                    Keep Reading →
                   </Link>
                 </p>
               </div>
