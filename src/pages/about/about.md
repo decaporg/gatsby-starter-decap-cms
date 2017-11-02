@@ -1,16 +1,19 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: A Dance With Dragons
+title: Values
 ---
-The Dothraki do things in their own time, for their own reasons. Fire and blood. When you play the game of thrones, you win or you die. The Dothraki do things in their own time, for their own reasons. What is dead may never die.
+### Shade-grown coffee
+Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
 
-Bastards are born of passion, aren't they? We don't despise them in Dorne. When you play the game of thrones,   you win or you die. More pigeon pie, please. More pigeon pie, please. A forked purple lightning bolt, on black field speckled with four-pointed stars. The Knight of Lemonwood.
+### Single origin
+Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
 
-I pledge my life and honor to the Night's Watch, for this night and all the nights to come. The War of the 5 kings. I would like a trial by combat.
+### Sustainable farming
+Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
 
-A Lannister always pays his debts. King in the North. As High as Honor. Dunc the Lunk, thick as a castle wall. I would like a trial by combat. The night is dark and full of terrors. You know nothing, Jon Snow. Bastards are born of passion, aren't they? We don't despise them in Dorne.
+### Direct sourcing
+Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
 
-When you play the game of thrones, you win or you die. It's ten thousand miles between Kings landing and the wall. The battle of the redgrass field. When you play the game of thrones, you win or you die. The battle of the redgrass field. May the Father judge him justly.
-
-The battle of the redgrass field. A good act does not wash out the bad, nor a bad act the good. Each should have its own reward. Unbowed, Unbent, Unbroken. The tourney of Ashford Meadows. The battle of the redgrass field. I would like a trial by combat. More pigeon pie, please. The Dothraki do things in their own time, for their own reasons. When you play the game of thrones, you win or you die. The wolf and the lion. The War of the 5 kings. King in the North. It is rare to meet a Lannister who shares my enthusiasm for dead Lannisters. Unbowed, Unbent, Unbroken. The battle of the redgrass field.
+### Reinvest profits
+We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.

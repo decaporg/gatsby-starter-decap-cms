@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import github from '../img/github-icon.svg';
+import logo from '../img/logo.svg';
 import 'bulma';
 import './index.css';
 
@@ -11,7 +12,9 @@ const Navbar = () => (
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
-          Gatsby powered by Netlify CMS
+          <figure className="image">
+            <img src={logo} alt="Kaldi" width="88" />
+          </figure>
         </Link>
       </div>
       <div className="navbar-start">
