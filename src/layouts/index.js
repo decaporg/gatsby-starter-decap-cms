@@ -4,16 +4,15 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import github from '../img/github-icon.svg';
 import logo from '../img/logo.svg';
-import 'bulma';
-import './index.css';
+import './all.sass';
 
 const Navbar = () => (
-  <nav className="navbar is-light">
-    <div className="container">
+  <nav className="navbar is-transparent">
+    <div className="container flex-column-mobile">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
           <figure className="image">
-            <img src={logo} alt="Kaldi" width="88" />
+            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
           </figure>
         </Link>
       </div>
