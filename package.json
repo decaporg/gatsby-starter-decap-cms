@@ -12,8 +12,7 @@
     "gatsby-remark-images": "^1.5.18",
     "gatsby-source-filesystem": "^1.5.5",
     "gatsby-transformer-remark": "^1.7.17",
-    "react-load-script": "0.0.6",
-    "react-script-loader": "0.0.1"
+    "react-load-script": "0.0.6"
   },
   "keywords": [
     "gatsby"
