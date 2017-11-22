@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import Script from 'react-load-script';
 
 export default class IndexPage extends React.Component {
-  componentDidMount() {
+  handleScriptLoad() {
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', user => {
         if (!user) {
@@ -13,6 +14,7 @@ export default class IndexPage extends React.Component {
         }
       });
     }
+    window.netlifyIdentity.init();
   }
 
   render() {
@@ -20,9 +22,10 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
     return (
       <section className="section">
-        <Helmet>
-          <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-        </Helmet>
+        <Script
+          url="https://identity.netlify.com/v1/netlify-identity-widget.js" 
+          onLoad={this.handleScriptLoad.bind(this)}
+        />
         <div className="container">
           {posts.filter(post => post.node.frontmatter.templateKey === 'blog-post').map(({ node: post }) => {
             return (
