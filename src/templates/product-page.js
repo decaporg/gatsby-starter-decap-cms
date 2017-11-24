@@ -118,7 +118,7 @@ export const productPageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                resolutions(width: 400) {
+                resolutions(width: 220) {
                   width
                   height
                   src
