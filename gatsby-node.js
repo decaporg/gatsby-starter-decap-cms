@@ -16,6 +16,102 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               date
               title
+              image {
+                childImageSharp {
+                  resolutions(width: 1400) {
+                    width
+                    height
+                    src
+                    srcSet
+                  }
+                }
+              }
+              heading
+              description
+              intro {
+                blurbs {
+                  image {
+                    childImageSharp {
+                      resolutions(width: 220) {
+                        width
+                        height
+                        src
+                        srcSet
+                      }
+                    }
+                  }
+                  text
+                }
+                heading
+                description
+              }
+              main {
+                heading
+                description
+                image1 {
+                  alt
+                  image {
+                    childImageSharp {
+                      resolutions(width: 400) {
+                        width
+                        height
+                        src
+                        srcSet
+                      }
+                    }
+                  }
+                }
+                image2 {
+                  alt
+                  image {
+                    childImageSharp {
+                      resolutions(width: 400) {
+                        width
+                        height
+                        src
+                        srcSet
+                      }
+                    }
+                  }
+                }
+                image3 {
+                  alt
+                  image {
+                    childImageSharp {
+                      resolutions(width: 400) {
+                        width
+                        height
+                        src
+                        srcSet
+                      }
+                    }
+                  }
+                }
+              }
+              testimonials {
+                author
+                quote
+              }
+              full_image {
+                childImageSharp {
+                  resolutions(width: 400) {
+                    width
+                    height
+                    src
+                    srcSet
+                  }
+                }
+              }
+              pricing {
+                heading
+                description
+                plans {
+                  description
+                  items
+                  plan
+                  price
+                }
+              }
             }
           }
         }

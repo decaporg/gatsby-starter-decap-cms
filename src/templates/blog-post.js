@@ -7,8 +7,13 @@ export default function Template({ data }) {
     <section className="section">
       <Helmet title={`Blog | ${post.frontmatter.title}`} />
       <div className="container content">
-        <h1 className="title is-size-2 has-text-info is-bold-light">{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{post.frontmatter.title}</h1>
+            <p>{post.frontmatter.description}</p>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -22,6 +27,7 @@ export const pageQuery = graphql`
         path
         date(formatString: "MMMM DD, YYYY")
         title
+        description
       }
     }
   }
