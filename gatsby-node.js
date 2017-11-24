@@ -16,12 +16,30 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               date
               title
-              image
+              image {
+                childImageSharp {
+                  resolutions(width: 1400) {
+                    width
+                    height
+                    src
+                    srcSet
+                  }
+                }
+              }
               heading
               description
               intro {
                 blurbs {
-                  image
+                  image {
+                    childImageSharp {
+                      resolutions(width: 400) {
+                        width
+                        height
+                        src
+                        srcSet
+                      }
+                    }
+                  }
                   text
                 }
                 heading
@@ -32,22 +50,58 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 description
                 image1 {
                   alt
-                  image
+                  image {
+                    childImageSharp {
+                      resolutions(width: 400) {
+                        width
+                        height
+                        src
+                        srcSet
+                      }
+                    }
+                  }
                 }
                 image2 {
                   alt
-                  image
+                  image {
+                    childImageSharp {
+                      resolutions(width: 400) {
+                        width
+                        height
+                        src
+                        srcSet
+                      }
+                    }
+                  }
                 }
                 image3 {
                   alt
-                  image
+                  image {
+                    childImageSharp {
+                      resolutions(width: 400) {
+                        width
+                        height
+                        src
+                        srcSet
+                      }
+                    }
+                  }
                 }
               }
               testimonials {
                 author
                 quote
               }
-              full_image
+              full_image {
+                childImageSharp {
+                  resolutions(width: 400) {
+                    width
+                    height
+                    src
+                    srcSet
+                  }
+                }
+              }
               pricing {
                 heading
                 description
@@ -65,6 +119,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
+      console.log(result.errors);
       return Promise.reject(result.errors);
     }
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {

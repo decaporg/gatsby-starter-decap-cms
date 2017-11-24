@@ -17,8 +17,22 @@ export default ({ data }) => {
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <h2 className="has-text-weight-bold is-size-1">{frontmatter.title}</h2>
-                <img src={frontmatter.image} alt="" />
+                <div
+                  className="full-width-image-container margin-top-0"
+                  style={{ backgroundImage: `url(${frontmatter.image.childImageSharp.resolutions.src})` }}
+                >
+                  <h2
+                    className="has-text-weight-bold is-size-1"
+                    style={{
+                      boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
+                      backgroundColor: '#f40',
+                      color: 'white',
+                      padding: '1rem'
+                    }}
+                  >
+                    {frontmatter.title}
+                  </h2>
+                </div>
                 <div className="columns">
                   <div className="column is-7">
                     <h3 className="has-text-weight-semibold is-size-2">{frontmatter.heading}</h3>
@@ -32,23 +46,44 @@ export default ({ data }) => {
                     <p>{frontmatter.main.description}</p>
                   </div>
                 </div>
-                <div className="tile is-vertical is-ancestor">
-                  <div className="tile is-parent">
-                    <div className="tile is-child is-6">
-                      <img src={grid1} alt="" />
+                <div className="tile is-ancestor">
+                  <div className="tile is-vertical">
+                    <div className="tile">
+                      <div className="tile is-parent is-vertical">
+                        <article className="tile is-child">
+                          <img
+                            style={{ borderRadius: '5px' }}
+                            src={frontmatter.main.image1.image.childImageSharp.resolutions.src}
+                            alt=""
+                          />
+                        </article>
+                      </div>
+                      <div className="tile is-parent">
+                        <article className="tile is-child">
+                          <img
+                            style={{ borderRadius: '5px' }}
+                            src={frontmatter.main.image2.image.childImageSharp.resolutions.src}
+                            alt=""
+                          />
+                        </article>
+                      </div>
                     </div>
-                    <div className="tile is-child is-6">
-                      <img src={grid2} alt="" />
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <div className="tile is-child">
-                      <img src={grid3} alt="" />
+                    <div className="tile is-parent">
+                      <article className="tile is-child">
+                        <img
+                          style={{ borderRadius: '5px' }}
+                          src={frontmatter.main.image3.image.childImageSharp.resolutions.src}
+                          alt=""
+                        />
+                      </article>
                     </div>
                   </div>
                 </div>
                 <Testimonials testimonials={frontmatter.testimonials} />
-                <div className="full-width-image-container" style={{ backgroundImage: `url(${fullWidth})` }} />
+                <div
+                  className="full-width-image-container"
+                  style={{ backgroundImage: `url(${frontmatter.full_image.childImageSharp.resolutions.src})` }}
+                />
                 <h2 className="has-text-weight-semibold is-size-2">{frontmatter.pricing.heading}</h2>
                 <p className="is-size-5">{frontmatter.pricing.description}</p>
                 <Pricing data={frontmatter.pricing.plans} />
@@ -67,12 +102,30 @@ export const productPageQuery = graphql`
       frontmatter {
         title
         path
-        image
+        image {
+          childImageSharp {
+            resolutions(width: 1400) {
+              width
+              height
+              src
+              srcSet
+            }
+          }
+        }
         heading
         description
         intro {
           blurbs {
-            image
+            image {
+              childImageSharp {
+                resolutions(width: 400) {
+                  width
+                  height
+                  src
+                  srcSet
+                }
+              }
+            }
             text
           }
           heading
@@ -83,22 +136,46 @@ export const productPageQuery = graphql`
           description
           image1 {
             alt
-            image
+            image {
+              childImageSharp {
+                resolutions(width: 700) {
+                  src
+                }
+              }
+            }
           }
           image2 {
             alt
-            image
+            image {
+              childImageSharp {
+                resolutions(width: 700) {
+                  src
+                }
+              }
+            }
           }
           image3 {
             alt
-            image
+            image {
+              childImageSharp {
+                resolutions(width: 1400) {
+                  src
+                }
+              }
+            }
           }
         }
         testimonials {
           author
           quote
         }
-        full_image
+        full_image {
+          childImageSharp {
+            resolutions(width: 1400) {
+              src
+            }
+          }
+        }
         pricing {
           heading
           description
@@ -107,17 +184,6 @@ export const productPageQuery = graphql`
             items
             plan
             price
-          }
-        }
-      }
-    }
-    images: allImageSharp {
-      edges {
-        node {
-          ... on ImageSharp {
-            resize(width: 125, height: 125, rotate: 180) {
-              src
-            }
           }
         }
       }
