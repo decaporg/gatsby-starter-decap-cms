@@ -4,7 +4,12 @@ This repo contains an example business website that is built with [Gatsby](https
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](netlify.com) for continuous deployment, and CDN distribution.
 
-## Getting Started
+## Prerequisites
+
+- Node (I recommend using v8.2.0 or higher)
+- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
+
+## Getting Started (Recommended)
 
 Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
 
@@ -12,22 +17,28 @@ Netlify CMS can run in any frontend web environment, but the quickest way to try
 
 After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
 
-## Access Locally
-
-### Prerequisites
-
-- Node (I recommend using v8.2.0 or higher)
-- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
-
-### Run Locally
+### Access Locally
 ```
-gatsby new [SITE_DIRECTORY_NAME] https://github.com/AustinGreen/gatsby-starter-netlify-cms/
+$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
+$ cd [REPO_NAME]
+$ yarn
+$ gatsby develop
+```
+To test the CMS locally, you'll need run a production build of the site:
+```
+$ gatsby build
+$ gatsby serve
+```
+
+## Getting Started (Without Netlify)
+```
+$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/AustinGreen/gatsby-starter-netlify-cms/
 $ cd [SITE_DIRECTORY_NAME]
 $ gatsby build
 $ gatsby serve
 ```
 
-### Accessing the CMS
+### Setting up the CMS
 Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
 
 ## Debugging
