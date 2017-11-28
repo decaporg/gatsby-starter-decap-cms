@@ -23,7 +23,7 @@ export default class IndexPage extends React.Component {
     return (
       <section className="section">
         <Script
-          url="https://identity.netlify.com/v1/netlify-identity-widget.js" 
+          url="https://identity.netlify.com/v1/netlify-identity-widget.js"
           onLoad={this.handleScriptLoad.bind(this)}
         />
         <div className="container">
