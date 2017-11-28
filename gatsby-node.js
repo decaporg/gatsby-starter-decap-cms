@@ -16,30 +16,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               date
               title
-              image {
-                childImageSharp {
-                  resolutions(width: 1400) {
-                    width
-                    height
-                    src
-                    srcSet
-                  }
-                }
-              }
+              image
               heading
               description
               intro {
                 blurbs {
-                  image {
-                    childImageSharp {
-                      resolutions(width: 220) {
-                        width
-                        height
-                        src
-                        srcSet
-                      }
-                    }
-                  }
+                  image
                   text
                 }
                 heading
@@ -50,58 +32,22 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 description
                 image1 {
                   alt
-                  image {
-                    childImageSharp {
-                      resolutions(width: 400) {
-                        width
-                        height
-                        src
-                        srcSet
-                      }
-                    }
-                  }
+                  image
                 }
                 image2 {
                   alt
-                  image {
-                    childImageSharp {
-                      resolutions(width: 400) {
-                        width
-                        height
-                        src
-                        srcSet
-                      }
-                    }
-                  }
+                  image
                 }
                 image3 {
                   alt
-                  image {
-                    childImageSharp {
-                      resolutions(width: 400) {
-                        width
-                        height
-                        src
-                        srcSet
-                      }
-                    }
-                  }
+                  image
                 }
               }
               testimonials {
                 author
                 quote
               }
-              full_image {
-                childImageSharp {
-                  resolutions(width: 400) {
-                    width
-                    height
-                    src
-                    srcSet
-                  }
-                }
-              }
+              full_image
               pricing {
                 heading
                 description

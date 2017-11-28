@@ -2,10 +2,6 @@ import React from 'react';
 import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
-import grid1 from '../pages/product/img/products/products-grid1.jpg';
-import grid2 from '../pages/product/img/products/products-grid2.jpg';
-import grid3 from '../pages/product/img/products/products-grid3.jpg';
-import fullWidth from '../pages/product/img/products/products-full-width.jpg';
 
 export default ({ data }) => {
   console.log(data);
@@ -19,7 +15,7 @@ export default ({ data }) => {
               <div className="content">
                 <div
                   className="full-width-image-container margin-top-0"
-                  style={{ backgroundImage: `url(${frontmatter.image.childImageSharp.resolutions.src})` }}
+                  style={{ backgroundImage: `url(${frontmatter.image})` }}
                 >
                   <h2
                     className="has-text-weight-bold is-size-1"
@@ -53,7 +49,7 @@ export default ({ data }) => {
                         <article className="tile is-child">
                           <img
                             style={{ borderRadius: '5px' }}
-                            src={frontmatter.main.image1.image.childImageSharp.resolutions.src}
+                            src={frontmatter.main.image1.image}
                             alt=""
                           />
                         </article>
@@ -62,7 +58,7 @@ export default ({ data }) => {
                         <article className="tile is-child">
                           <img
                             style={{ borderRadius: '5px' }}
-                            src={frontmatter.main.image2.image.childImageSharp.resolutions.src}
+                            src={frontmatter.main.image2.image}
                             alt=""
                           />
                         </article>
@@ -72,7 +68,7 @@ export default ({ data }) => {
                       <article className="tile is-child">
                         <img
                           style={{ borderRadius: '5px' }}
-                          src={frontmatter.main.image3.image.childImageSharp.resolutions.src}
+                          src={frontmatter.main.image3.image}
                           alt=""
                         />
                       </article>
@@ -82,7 +78,7 @@ export default ({ data }) => {
                 <Testimonials testimonials={frontmatter.testimonials} />
                 <div
                   className="full-width-image-container"
-                  style={{ backgroundImage: `url(${frontmatter.full_image.childImageSharp.resolutions.src})` }}
+                  style={{ backgroundImage: `url(${frontmatter.full_image})` }}
                 />
                 <h2 className="has-text-weight-semibold is-size-2">{frontmatter.pricing.heading}</h2>
                 <p className="is-size-5">{frontmatter.pricing.description}</p>
@@ -102,30 +98,12 @@ export const productPageQuery = graphql`
       frontmatter {
         title
         path
-        image {
-          childImageSharp {
-            resolutions(width: 1400) {
-              width
-              height
-              src
-              srcSet
-            }
-          }
-        }
+        image
         heading
         description
         intro {
           blurbs {
-            image {
-              childImageSharp {
-                resolutions(width: 220) {
-                  width
-                  height
-                  src
-                  srcSet
-                }
-              }
-            }
+            image
             text
           }
           heading
@@ -136,46 +114,22 @@ export const productPageQuery = graphql`
           description
           image1 {
             alt
-            image {
-              childImageSharp {
-                resolutions(width: 700) {
-                  src
-                }
-              }
-            }
+            image
           }
           image2 {
             alt
-            image {
-              childImageSharp {
-                resolutions(width: 700) {
-                  src
-                }
-              }
-            }
+            image
           }
           image3 {
             alt
-            image {
-              childImageSharp {
-                resolutions(width: 1400) {
-                  src
-                }
-              }
-            }
+            image
           }
         }
         testimonials {
           author
           quote
         }
-        full_image {
-          childImageSharp {
-            resolutions(width: 1400) {
-              src
-            }
-          }
-        }
+        full_image
         pricing {
           heading
           description
