@@ -4,7 +4,6 @@ import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
 
 export default ({ data }) => {
-  console.log(data);
   const { frontmatter } = data.markdownRemark;
   return (
     <section className="section section--gradient">
