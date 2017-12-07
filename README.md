@@ -22,20 +22,20 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
 $ yarn
-$ gatsby develop
+$ npm run develop
 ```
 To test the CMS locally, you'll need run a production build of the site:
 ```
-$ gatsby build
-$ gatsby serve
+$ npm run build
+$ npm run serve
 ```
 
 ## Getting Started (Without Netlify)
 ```
 $ gatsby new [SITE_DIRECTORY_NAME] https://github.com/AustinGreen/gatsby-starter-netlify-cms/
 $ cd [SITE_DIRECTORY_NAME]
-$ gatsby build
-$ gatsby serve
+$ npm run build
+$ npm run serve
 ```
 
 ### Setting up the CMS
