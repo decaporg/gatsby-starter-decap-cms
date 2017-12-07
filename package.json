@@ -25,7 +25,10 @@
     "build:cms": "cd cms && yarn && npm run build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "_format": "prettier --trailing-comma es5 --no-semi --single-quote --write",
+    "format": "npm run format:src & npm run format:cms",
+    "format:src": "npm run _format 'src/**/*.js'",
+    "format:cms": "npm run _format 'cms/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
