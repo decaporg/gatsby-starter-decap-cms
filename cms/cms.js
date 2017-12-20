@@ -1,9 +1,9 @@
-import React from 'react'
-import CMS from 'netlify-cms'
+import React from 'react';
+import CMS from 'netlify-cms';
 
-import Features from 'site/components/Features'
-import Testimonials from 'site/components/Testimonials'
-import Pricing from 'site/components/Pricing'
+import Features from 'site/components/Features';
+import Testimonials from 'site/components/Testimonials';
+import Pricing from 'site/components/Pricing';
 
 import { AboutPageTemplate } from 'site/templates/about-page';
 import { ProductPageTemplate } from 'site/templates/product-page';
@@ -18,19 +18,19 @@ const BlogPostPreview = ({ entry, widgetFor }) => (
     description={entry.getIn(['data', 'description'])}
     title={entry.getIn(['data', 'title'])}
   />
-)
+);
 
 const ProductPagePreview = ({ entry, widgetFor, getAsset }) => {
-  const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
-  const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
+  const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs']);
+  const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
 
-  const entryTestimonials = entry.getIn(['data', 'testimonials'])
-  const testimonials = entryTestimonials ? entryTestimonials.toJS() : []
+  const entryTestimonials = entry.getIn(['data', 'testimonials']);
+  const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
 
-  const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans'])
-  const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
+  const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans']);
+  const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : [];
 
-  return <ProductPageTemplate
+  return (<ProductPageTemplate
     image={entry.getIn(['data', 'image'])}
     title={entry.getIn(['data', 'title'])}
     heading={entry.getIn(['data', 'heading'])}
@@ -59,10 +59,10 @@ const ProductPagePreview = ({ entry, widgetFor, getAsset }) => {
       description: entry.getIn(['data', 'pricing', 'description']),
       plans: pricingPlans,
     }}
-  />;
-}
+  />);
+};
 
-CMS.registerPreviewStyle('/styles.css')
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewStyle('/styles.css');
+CMS.registerPreviewTemplate('about', AboutPagePreview);
+CMS.registerPreviewTemplate('products', ProductPagePreview);
+CMS.registerPreviewTemplate('blog', BlogPostPreview);
