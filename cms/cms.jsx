@@ -1,10 +1,6 @@
 import React from 'react';
 import CMS from 'netlify-cms';
 
-import Features from '../src/components/Features';
-import Testimonials from '../src/components/Testimonials';
-import Pricing from '../src/components/Pricing';
-
 import { AboutPageTemplate } from '../src/templates/about-page';
 import { ProductPageTemplate } from '../src/templates/product-page';
 import { BlogPostTemplate } from '../src/templates/blog-post';
@@ -20,7 +16,7 @@ const BlogPostPreview = ({ entry, widgetFor }) => (
   />
 );
 
-const ProductPagePreview = ({ entry, widgetFor, getAsset }) => {
+const ProductPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs']);
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
 
