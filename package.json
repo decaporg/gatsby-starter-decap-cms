@@ -16,7 +16,9 @@
     "react-load-script": "0.0.6",
     "gatsby-transformer-sharp": "^1.6.13"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
