@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Script from 'react-load-script';
+import graphql from 'graphql';
 
 export default class IndexPage extends React.Component {
   static handleScriptLoad() {

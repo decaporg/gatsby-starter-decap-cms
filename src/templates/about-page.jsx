@@ -1,4 +1,5 @@
 import React from 'react';
+import graphql from 'graphql';
 import Content, { HTMLContent } from '../components/Content';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
