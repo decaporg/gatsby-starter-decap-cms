@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import Script from 'react-load-script';
 
 export default class IndexPage extends React.Component {
-  handleScriptLoad() {
+  static handleScriptLoad() {
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', (user) => {
         if (!user) {
@@ -19,11 +19,12 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
+
     return (
       <section className="section">
         <Script
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          onLoad={this.handleScriptLoad.bind(this)}
+          onLoad={() => this.handleScriptLoad()}
         />
         <div className="container">
           <div className="content">
