@@ -13,10 +13,15 @@
     "gatsby-remark-images": "^1.5.18",
     "gatsby-source-filesystem": "^1.5.5",
     "gatsby-transformer-remark": "^1.7.17",
-    "react-load-script": "0.0.6",
-    "gatsby-transformer-sharp": "^1.6.13"
+    "gatsby-transformer-sharp": "^1.6.13",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-load-script": "0.0.6"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
