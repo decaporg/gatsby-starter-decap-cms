@@ -1,12 +1,13 @@
 {
   "name": "gatsby-starter-netlify-cms",
   "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.6.0",
     "gatsby": "^1.9.63",
     "gatsby-link": "^1.6.21",
+    "gatsby-plugin-netlify-cms": "^1.0.2",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-sass": "^1.0.12",
     "gatsby-plugin-sharp": "^1.6.18",
@@ -25,15 +26,11 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "npm run build:cms && npm run build:site",
-    "build:site": "gatsby build",
-    "build:cms": "cd cms && yarn && npm run build",
+    "start": "npm run develop",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "_format": "prettier --trailing-comma es5 --no-semi --single-quote --write",
-    "format": "npm run format:src & npm run format:cms",
-    "format:src": "npm run _format 'src/**/*.js'",
-    "format:cms": "npm run _format 'cms/**/*.js'",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

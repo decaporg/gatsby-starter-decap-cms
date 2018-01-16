@@ -1,8 +1,9 @@
 import CMS from 'netlify-cms';
+import 'netlify-cms/dist/cms.css';
 
-import AboutPagePreview from './components/AboutPagePreview';
-import BlogPostPreview from './components/BlogPostPreview';
-import ProductPagePreview from './components/ProductPagePreview';
+import AboutPagePreview from './preview-templates/AboutPagePreview';
+import BlogPostPreview from './preview-templates/BlogPostPreview';
+import ProductPagePreview from './preview-templates/ProductPagePreview';
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewTemplate('about', AboutPagePreview);
