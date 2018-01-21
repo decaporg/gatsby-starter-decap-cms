@@ -73,14 +73,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const pagePath = node.frontmatter.path;
       createPage({
-        path: node.frontmatter.path,
+        path: pagePath,
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
+        // additional data can be passed via context
         context: {
-          path: node.frontmatter.path
-        } // additional data can be passed via context
+          path: pagePath
+        }
       });
     });
   });
