@@ -1,3 +1,5 @@
 [build]
   publish = "public"
   command = "npm run build"
+[build.environment]
+  YARN_FLAGS = "--no-ignore-optional"
