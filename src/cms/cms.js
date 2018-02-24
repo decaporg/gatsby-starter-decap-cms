@@ -1,5 +1,4 @@
-import CMS from 'netlify-cms';
-import 'netlify-cms/dist/cms.css';
+import CMS from "netlify-cms"
 
 import AboutPagePreview from './preview-templates/AboutPagePreview';
 import BlogPostPreview from './preview-templates/BlogPostPreview';
