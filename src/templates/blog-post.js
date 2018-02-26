@@ -32,16 +32,17 @@ export const BlogPostTemplate = ({
 
 export default ({ data }) => {
   const { markdownRemark: post } = data
-
-  return (
-    <BlogPostTemplate
+  if (post) {
+    ;<BlogPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
       helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
       title={post.frontmatter.title}
     />
-  )
+  } else {
+    return null
+  }
 }
 
 export const pageQuery = graphql`
