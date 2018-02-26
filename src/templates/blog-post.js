@@ -32,10 +32,9 @@ export const BlogPostTemplate = ({
 
 export default ({ data }) => {
   const { markdownRemark: post } = data
-
   return (
     <BlogPostTemplate
-      content={post.html}
+      content={post ? post.html : ""}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
       helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
