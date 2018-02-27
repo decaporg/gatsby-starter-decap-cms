@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import graphql from 'graphql'
 
 export default class IndexPage extends React.Component {
   render() {
