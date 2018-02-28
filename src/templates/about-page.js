@@ -39,7 +39,6 @@ export const aboutPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        path
         title
       }
     }
