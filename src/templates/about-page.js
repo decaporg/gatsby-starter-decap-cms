@@ -35,8 +35,8 @@ export default ({ data }) => {
 }
 
 export const aboutPageQuery = graphql`
-  query AboutPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query AboutPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         path
