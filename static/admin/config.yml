@@ -13,7 +13,6 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Path", name: "path", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
@@ -27,7 +26,6 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/about"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/product/product.md"
@@ -35,7 +33,6 @@ collections:
         name: "products"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/products"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}

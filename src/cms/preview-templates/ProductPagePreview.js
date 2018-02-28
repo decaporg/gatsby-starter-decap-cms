@@ -1,15 +1,15 @@
-import React from 'react';
-import { ProductPageTemplate } from '../../templates/product-page';
+import React from 'react'
+import { ProductPageTemplate } from '../../templates/product-page'
 
 const ProductPagePreview = ({ entry, getAsset }) => {
-  const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs']);
-  const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
+  const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
+  const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
-  const entryTestimonials = entry.getIn(['data', 'testimonials']);
-  const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
+  const entryTestimonials = entry.getIn(['data', 'testimonials'])
+  const testimonials = entryTestimonials ? entryTestimonials.toJS() : []
 
-  const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans']);
-  const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : [];
+  const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans'])
+  const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
 
   return (
     <ProductPageTemplate
@@ -42,7 +42,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
         plans: pricingPlans,
       }}
     />
-  );
-};
+  )
+}
 
-export default ProductPagePreview;
+export default ProductPagePreview

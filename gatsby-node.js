@@ -1,4 +1,5 @@
-const path = require("path")
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
@@ -8,8 +9,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       allMarkdownRemark(limit: 1000) {
         edges {
           node {
+            id
+            fields {
+              slug
+            }
             frontmatter {
-              path
               templateKey
             }
           }
@@ -22,16 +26,31 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const pagePath = node.frontmatter.path
+    result.data.allMarkdownRemark.edges.forEach(edge => {
+      const id = edge.node.id
       createPage({
-        path: pagePath,
+        path: edge.node.fields.slug,
         component: path.resolve(
-          `src/templates/${String(node.frontmatter.templateKey)}.js`
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
-        context: {},
+        context: {
+          id,
+        },
       })
     })
   })
+}
+
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }
