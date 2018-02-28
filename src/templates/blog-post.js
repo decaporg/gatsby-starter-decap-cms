@@ -44,7 +44,7 @@ export default props => {
 }
 
 export const pageQuery = graphql`
-  query BlogPostByPath($id: String!) {
+  query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
