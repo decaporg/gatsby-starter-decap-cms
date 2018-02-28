@@ -123,8 +123,8 @@ export default ({ data }) => {
 }
 
 export const productPageQuery = graphql`
-  query ProductPage($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ProductPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         path
