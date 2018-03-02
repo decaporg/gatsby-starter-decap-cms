@@ -21,14 +21,14 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/about/about.md"
+      - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/product/product.md"
+      - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
         fields:
