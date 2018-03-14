@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -22,7 +23,13 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   )
 }
 
-export default ({ data }) => {
+AboutPageTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  contentComponent: PropTypes.instanceOf(React.Component),
+}
+
+const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
@@ -33,6 +40,12 @@ export default ({ data }) => {
     />
   )
 }
+
+AboutPage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+export default AboutPage
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {

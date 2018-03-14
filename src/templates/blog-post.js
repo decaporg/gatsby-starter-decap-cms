@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -29,8 +30,16 @@ export const BlogPostTemplate = ({
   )
 }
 
-export default props => {
-  const { markdownRemark: post } = props.data
+BlogPostTemplate.propTypes = {
+  content: PropTypes.string.isRequired,
+  contentComponent: PropTypes.instanceOf(React.Component),
+  description: PropTypes.string,
+  title: PropTypes.string,
+  helmet: PropTypes.instanceOf(Helmet),
+}
+
+const BlogPost = ({ data }) => {
+  const { markdownRemark: post } = data
 
   return (
     <BlogPostTemplate
@@ -42,6 +51,14 @@ export default props => {
     />
   )
 }
+
+BlogPost.propTypes = {
+  data: PropTypes.shape({
+    data: PropTypes.object,
+  }),
+}
+
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
