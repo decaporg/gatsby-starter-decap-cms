@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.string.isRequired,
-  contentComponent: PropTypes.instanceOf(React.Component),
+  contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
@@ -54,7 +54,7 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    data: PropTypes.object,
+    markdownRemark: PropTypes.object,
   }),
 }
 
