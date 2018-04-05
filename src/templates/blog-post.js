@@ -49,6 +49,7 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.string.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  tags: PropTypes.array,
   title: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
 }

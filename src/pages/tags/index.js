@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
@@ -29,6 +30,14 @@ const TagsPage = ({
     </div>
   </section>
 )
+
+TagsPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
 
 export default TagsPage
 
