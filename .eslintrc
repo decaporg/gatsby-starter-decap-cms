@@ -7,6 +7,6 @@
   "rules": {
     "jsx-quotes": "off",
     "space-before-function-paren": "off",
-    "react/prop-types": "warn"
+    "react/prop-types": "off"
   }
 }
