@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-trailing-commas", "standard-react"],
+  "globals": {
+    "graphql": true
+  },
+  "rules": {
+    "jsx-quotes": "off",
+    "space-before-function-paren": "off",
+    "react/prop-types": "off"
+  }
+}
