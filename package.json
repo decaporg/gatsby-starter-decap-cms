@@ -28,13 +28,16 @@
   "main": "n/a",
   "scripts": {
     "start": "npm run develop",
+    "prebuild": "npm run lint",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
+    "lint": "eslint --ext js,jsx --ignore-path .gitignore .",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
