@@ -43,6 +43,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
     "prettier": "^1.7.4"
   }
 }
