@@ -12,7 +12,7 @@ class TagRoute extends React.Component {
         </Link>
       </li>
     ))
-    const tag = this.props.pathContext.tag
+    const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount} post${
