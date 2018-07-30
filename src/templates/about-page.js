@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import AboutPageTemplate from '../components/AboutPageTemplate'
-import Content, { HTMLContent } from '../components/Content'
+import { HTMLContent } from '../components/Content'
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
