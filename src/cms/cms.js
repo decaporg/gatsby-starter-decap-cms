@@ -1,4 +1,5 @@
 import CMS from 'netlify-cms'
+import '../components/all.sass'
 
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
