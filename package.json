@@ -18,7 +18,7 @@
     "gatsby-transformer-sharp": "^1.6.21",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
-    "netlify-cms": "^1.7.0",
+    "netlify-cms": "^2.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
