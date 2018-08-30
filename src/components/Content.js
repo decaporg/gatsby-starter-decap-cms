@@ -10,7 +10,7 @@ const Content = ({ content, className }) => (
 )
 
 Content.propTypes = {
-  content: PropTypes.string,
+  content: PropTypes.node,
   className: PropTypes.string,
 }
 
