@@ -26,7 +26,9 @@ export const ProductPageTemplate = ({
             <div className="content">
               <div
                 className="full-width-image-container margin-top-0"
-                style={{ backgroundImage: `url(${image.childImageSharp.sizes.src})` }}
+                style={{
+                  backgroundImage: `url(${image.childImageSharp.sizes.src})`,
+                }}
               >
                 <h2
                   className="has-text-weight-bold is-size-1"
@@ -62,41 +64,29 @@ export const ProductPageTemplate = ({
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
                       <article className="tile is-child">
-                        {/* <img
-                          style={{ borderRadius: '5px' }}
-                          src={main.image1.image}
-                          alt={main.image1.alt}
-                        /> */}
                         <Img
-                          sizes={main.image1.image.childImageSharp.sizes}
                           style={{ borderRadius: '5px' }}
+                          sizes={main.image1.image.childImageSharp.sizes}
+                          alt={main.image1.alt}
                         />
                       </article>
                     </div>
                     <div className="tile is-parent">
                       <article className="tile is-child">
-                        {/* <img
-                          style={{ borderRadius: '5px' }}
-                          src={main.image2.image}
-                          alt={main.image2.alt}
-                        /> */}
                         <Img
-                          sizes={main.image2.image.childImageSharp.sizes}
                           style={{ borderRadius: '5px' }}
+                          sizes={main.image2.image.childImageSharp.sizes}
+                          alt={main.image2.alt}
                         />
                       </article>
                     </div>
                   </div>
                   <div className="tile is-parent">
                     <article className="tile is-child">
-                      {/* <img
-                        style={{ borderRadius: '5px' }}
-                        src={main.image3.image}
-                        alt={main.image3.alt}
-                      /> */}
                       <Img
-                        sizes={main.image3.image.childImageSharp.sizes}
                         style={{ borderRadius: '5px' }}
+                        sizes={main.image3.image.childImageSharp.sizes}
+                        alt={main.image3.alt}
                       />
                     </article>
                   </div>
@@ -105,7 +95,11 @@ export const ProductPageTemplate = ({
               <Testimonials testimonials={testimonials} />
               <div
                 className="full-width-image-container"
-                style={{ backgroundImage: `url(${fullImage.childImageSharp.sizes.src})` }}
+                style={{
+                  backgroundImage: `url(${
+                    fullImage.childImageSharp.sizes.src
+                  })`,
+                }}
               />
               <h2 className="has-text-weight-semibold is-size-2">
                 {pricing.heading}
@@ -121,7 +115,9 @@ export const ProductPageTemplate = ({
 )
 
 ProductPageTemplate.propTypes = {
-  image: PropTypes.object,
+  image: PropTypes.shape({
+    childImageSharp: PropTypes.object,
+  }),
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
@@ -131,12 +127,20 @@ ProductPageTemplate.propTypes = {
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
-    image1: PropTypes.object,
-    image2: PropTypes.object,
-    image3: PropTypes.object,
+    image1: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
+    image2: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
+    image3: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
   }),
   testimonials: PropTypes.array,
-  fullImage: PropTypes.object,
+  fullImage: PropTypes.shape({
+    childImageSharp: PropTypes.object,
+  }),
   pricing: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
@@ -181,7 +185,7 @@ export const productPageQuery = graphql`
         title
         image {
           childImageSharp {
-            sizes(maxWidth: 1024, quality: 64) {
+            sizes(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpSizes
             }
           }
@@ -192,7 +196,7 @@ export const productPageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                sizes(maxWidth: 1024, quality: 64) {
+                sizes(maxWidth: 478, quality: 50) {
                   ...GatsbyImageSharpSizes
                 }
               }
@@ -209,7 +213,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                sizes(maxWidth: 1024, quality: 64) {
+                sizes(maxWidth: 526, quality: 64) {
                   ...GatsbyImageSharpSizes
                 }
               }
@@ -219,7 +223,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                sizes(maxWidth: 1024, quality: 64) {
+                sizes(maxWidth: 526, quality: 64) {
                   ...GatsbyImageSharpSizes
                 }
               }
@@ -229,7 +233,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                sizes(maxWidth: 1024, quality: 64) {
+                sizes(maxWidth: 1076, quality: 72) {
                   ...GatsbyImageSharpSizes
                 }
               }
@@ -242,7 +246,7 @@ export const productPageQuery = graphql`
         }
         full_image {
           childImageSharp {
-            sizes(maxWidth: 1024, quality: 64) {
+            sizes(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpSizes
             }
           }
