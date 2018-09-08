@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
@@ -25,7 +26,9 @@ export const ProductPageTemplate = ({
             <div className="content">
               <div
                 className="full-width-image-container margin-top-0"
-                style={{ backgroundImage: `url(${image})` }}
+                style={{
+                  backgroundImage: `url(${image.childImageSharp.sizes.src})`,
+                }}
               >
                 <h2
                   className="has-text-weight-bold is-size-1"
@@ -61,18 +64,18 @@ export const ProductPageTemplate = ({
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
                       <article className="tile is-child">
-                        <img
+                        <Img
                           style={{ borderRadius: '5px' }}
-                          src={main.image1.image}
+                          sizes={main.image1.image.childImageSharp.sizes}
                           alt={main.image1.alt}
                         />
                       </article>
                     </div>
                     <div className="tile is-parent">
                       <article className="tile is-child">
-                        <img
+                        <Img
                           style={{ borderRadius: '5px' }}
-                          src={main.image2.image}
+                          sizes={main.image2.image.childImageSharp.sizes}
                           alt={main.image2.alt}
                         />
                       </article>
@@ -80,9 +83,9 @@ export const ProductPageTemplate = ({
                   </div>
                   <div className="tile is-parent">
                     <article className="tile is-child">
-                      <img
+                      <Img
                         style={{ borderRadius: '5px' }}
-                        src={main.image3.image}
+                        sizes={main.image3.image.childImageSharp.sizes}
                         alt={main.image3.alt}
                       />
                     </article>
@@ -92,7 +95,11 @@ export const ProductPageTemplate = ({
               <Testimonials testimonials={testimonials} />
               <div
                 className="full-width-image-container"
-                style={{ backgroundImage: `url(${fullImage})` }}
+                style={{
+                  backgroundImage: `url(${
+                    fullImage.childImageSharp.sizes.src
+                  })`,
+                }}
               />
               <h2 className="has-text-weight-semibold is-size-2">
                 {pricing.heading}
@@ -108,7 +115,9 @@ export const ProductPageTemplate = ({
 )
 
 ProductPageTemplate.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.shape({
+    childImageSharp: PropTypes.object,
+  }),
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
@@ -118,12 +127,20 @@ ProductPageTemplate.propTypes = {
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
-    image1: PropTypes.object,
-    image2: PropTypes.object,
-    image3: PropTypes.object,
+    image1: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
+    image2: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
+    image3: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
   }),
   testimonials: PropTypes.array,
-  fullImage: PropTypes.string,
+  fullImage: PropTypes.shape({
+    childImageSharp: PropTypes.object,
+  }),
   pricing: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
@@ -166,12 +183,24 @@ export const productPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            sizes(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
         heading
         description
         intro {
           blurbs {
-            image
+            image {
+              childImageSharp {
+                sizes(maxWidth: 478, quality: 50) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
             text
           }
           heading
@@ -182,22 +211,46 @@ export const productPageQuery = graphql`
           description
           image1 {
             alt
-            image
+            image {
+              childImageSharp {
+                sizes(maxWidth: 526, quality: 64) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
           image2 {
             alt
-            image
+            image {
+              childImageSharp {
+                sizes(maxWidth: 526, quality: 64) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
           image3 {
             alt
-            image
+            image {
+              childImageSharp {
+                sizes(maxWidth: 1076, quality: 72) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
         testimonials {
           author
           quote
         }
-        full_image
+        full_image {
+          childImageSharp {
+            sizes(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
         pricing {
           heading
           description

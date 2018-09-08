@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
     {gridItems.map(item => (
-      <div key={item.image} className="column is-6">
+      <div key={item.image.childImageSharp.sizes.src} className="column is-6">
         <section className="section">
           <p className="has-text-centered">
-            <img alt="" src={item.image} />
+            <Img alt="" sizes={item.image.childImageSharp.sizes} />
           </p>
           <p>{item.text}</p>
         </section>
@@ -19,7 +20,9 @@ const FeatureGrid = ({ gridItems }) => (
 FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(
     PropTypes.shape({
-      image: PropTypes.string,
+      image: PropTypes.shape({
+        childImageSharp: PropTypes.object,
+      }),
       text: PropTypes.string,
     })
   ),
