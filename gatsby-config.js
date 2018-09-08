@@ -1,5 +1,3 @@
-require('babel-polyfill')
-
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',

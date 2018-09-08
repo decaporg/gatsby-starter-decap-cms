@@ -2,6 +2,7 @@ const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+require('babel-polyfill') // work-around for https://github.com/danielmahon/gatsby-remark-relative-images/issues/6
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
