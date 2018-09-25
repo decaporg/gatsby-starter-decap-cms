@@ -53,9 +53,6 @@ IndexPage.propTypes = {
   })
 };
 
-// sort: { order: DESC, fields: [frontmatter___date] }
-// front matter
-// // date(formatString: "MMMM DD, YYYY")
 export const pageQuery = graphql`
   query IndexQuery {
     allMdx(

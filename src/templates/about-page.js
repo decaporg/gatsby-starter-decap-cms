@@ -6,7 +6,8 @@ import Content, { HTMLContent } from "../components/Content";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 
 export const AboutPageTemplate = props => {
-  return <div>{JSON.stringify(props)}</div>;
+  console.log("about page", props);
+  return <div>{JSON.stringify(Object.keys(props))}</div>;
 };
 // export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 //   const PageContent = contentComponent || Content;

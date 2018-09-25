@@ -38,37 +38,37 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    // // const posts = result.data.allMarkdownRemark.edges
-    // const posts = result.data.allMdx.edges;
+    // const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.allMdx.edges;
 
-    // posts.forEach(edge => {
-    //   const id = edge.node.id;
-    //   const node = edge.node;
-    //   createPage({
-    //     // path: `/${node.parent.sourceInstanceName}/${node.parent.name}`,
-    //     path: node.fields.slug ? node.fields.slug : "/",
-    //     // tags: edge.node.frontmatter.tags,
-    //     component: componentWithMDXScope(
-    //       // path.resolve("./src/components/posts-page-layout.js"),
-    //       path.resolve(
-    //         `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-    //       ),
-    //       node.code.scope
-    //     ),
-    //     context: { id: node.id }
-    //   });
-    //   // createPage({
-    //   //   path: edge.node.fields.slug,
-    //   //   tags: edge.node.frontmatter.tags,
-    //   //   component: path.resolve(
-    //   //     `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-    //   //   ),
-    //   //   // additional data can be passed via context
-    //   //   context: {
-    //   //     id,
-    //   //   },
-    //   // })
-    // });
+    posts.forEach(edge => {
+      const id = edge.node.id;
+      const node = edge.node;
+      createPage({
+        // path: `/${node.parent.sourceInstanceName}/${node.parent.name}`,
+        path: node.fields.slug ? node.fields.slug : "/",
+        // tags: edge.node.frontmatter.tags,
+        component: componentWithMDXScope(
+          // path.resolve("./src/components/posts-page-layout.js"),
+          path.resolve(
+            `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          ),
+          node.code.scope
+        ),
+        context: { id: node.id }
+      });
+      // createPage({
+      //   path: edge.node.fields.slug,
+      //   tags: edge.node.frontmatter.tags,
+      //   component: path.resolve(
+      //     `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+      //   ),
+      //   // additional data can be passed via context
+      //   context: {
+      //     id,
+      //   },
+      // })
+    });
 
     // // Tag pages:
     // let tags = [];

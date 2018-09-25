@@ -8,7 +8,8 @@ import Content, { HTMLContent } from "../components/Content";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 
 export const BlogPostTemplate = props => {
-  return <div>{JSON.stringify(props)}</div>;
+  console.log("blog page", props);
+  return <div>{JSON.stringify(Object.keys(props))}</div>;
 };
 // export const BlogPostTemplate = ({
 //   content,
@@ -85,7 +86,7 @@ export default BlogPost;
 
 // date(formatString: "MMMM DD, YYYY")
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query($id: String!) {
     mdx(id: { eq: $id }) {
       id
       code {
