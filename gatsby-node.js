@@ -44,11 +44,11 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach(edge => {
       const id = edge.node.id;
       const node = edge.node;
-      console.log(
-        "creating page",
-        node.fields.slug,
-        `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-      );
+      // console.log(
+      //   "creating page",
+      //   node.fields.slug,
+      //   `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+      // );
       createPage({
         // path: `/${node.parent.sourceInstanceName}/${node.parent.name}`,
         path: node.fields.slug || "/",
