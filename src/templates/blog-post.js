@@ -7,10 +7,6 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 
-// export const BlogPostTemplate = props => {
-//   console.log("blog page", props);
-//   return <div>{JSON.stringify(Object.keys(props))}</div>;
-// };
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -61,7 +57,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { mdx: post } = data;
-  console.log({ data });
   return (
     <Layout>
       <BlogPostTemplate
@@ -84,7 +79,6 @@ BlogPost.propTypes = {
 
 export default BlogPost;
 
-// date(formatString: "MMMM DD, YYYY")
 export const pageQuery = graphql`
   query($id: String!) {
     mdx(id: { eq: $id }) {
@@ -93,6 +87,7 @@ export const pageQuery = graphql`
         body
       }
       frontmatter {
+        date(formatString: "MMMM DD, YYYY")
         title
         description
         tags

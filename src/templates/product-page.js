@@ -161,8 +161,11 @@ ProductPage.propTypes = {
 
 export default ProductPage;
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+// export const productPageQuery = graphql`
+//   query ProductPage($id: String!) {
+//     mdx(id: { eq: $id }) {
+export const pageQuery = graphql`
+  query($id: String!) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title
