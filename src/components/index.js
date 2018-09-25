@@ -12,12 +12,14 @@ import React, { Component } from "react";
 //   }
 // }
 
-export function Notification(props) {
-  const { type = "default", children } = props;
+export function Echo(props) {
+  const { children, color = "green", ...rest } = props;
   return (
     <div style={{ border: "3px solid orangered" }}>
-      <div>This is a React component! Type: {type}</div>
-      <div>{children}</div>
+      <div>
+        This is a React component! Stringifying props: {JSON.stringify(rest)}
+      </div>
+      <div style={{ color }}>{children}</div>
     </div>
   );
 }

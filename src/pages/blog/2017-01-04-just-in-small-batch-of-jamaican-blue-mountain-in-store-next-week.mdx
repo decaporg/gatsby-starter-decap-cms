@@ -8,7 +8,7 @@ tags:
   - MDX
   - React
 ---
-import { Notification } from "$components";
+import { Echo } from "$components";
 
 This is some text
 
@@ -20,6 +20,6 @@ This is more stuff
 
 and now we are in React
 
-<Notification type="info">
-  <p>This docs page is a WIP</p>
-</Notification>
+<Echo type="info" text="this is props passed to React" color="pink">
+  <p>Here is some content from the MDX side</p>
+</Echo>
