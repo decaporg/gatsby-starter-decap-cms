@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
@@ -25,7 +26,7 @@ export const ProductPageTemplate = ({
             <div className="content">
               <div
                 className="full-width-image-container margin-top-0"
-                style={{ backgroundImage: `url(${image})` }}
+                style={{ backgroundImage: `url(${image.childImageSharp.fluid.src})` }}
               >
                 <h2
                   className="has-text-weight-bold is-size-1"
@@ -61,18 +62,18 @@ export const ProductPageTemplate = ({
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
                       <article className="tile is-child">
-                        <img
+                        <Img
                           style={{ borderRadius: '5px' }}
-                          src={main.image1.image}
+                          fluid={main.image1.image.childImageSharp.fluid}
                           alt={main.image1.alt}
                         />
                       </article>
                     </div>
                     <div className="tile is-parent">
                       <article className="tile is-child">
-                        <img
+                        <Img
                           style={{ borderRadius: '5px' }}
-                          src={main.image2.image}
+                          fluid={main.image2.image.childImageSharp.fluid}
                           alt={main.image2.alt}
                         />
                       </article>
@@ -80,9 +81,9 @@ export const ProductPageTemplate = ({
                   </div>
                   <div className="tile is-parent">
                     <article className="tile is-child">
-                      <img
+                      <Img
                         style={{ borderRadius: '5px' }}
-                        src={main.image3.image}
+                        fluid={main.image3.image.childImageSharp.fluid}
                         alt={main.image3.alt}
                       />
                     </article>
@@ -108,7 +109,7 @@ export const ProductPageTemplate = ({
 )
 
 ProductPageTemplate.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.object,
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
@@ -166,12 +167,24 @@ export const productPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         heading
         description
         intro {
           blurbs {
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 478, quality: 50) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             text
           }
           heading
@@ -182,22 +195,46 @@ export const productPageQuery = graphql`
           description
           image1 {
             alt
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           image2 {
             alt
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           image3 {
             alt
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1076, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
         testimonials {
           author
           quote
         }
-        full_image
+        full_image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         pricing {
           heading
           description

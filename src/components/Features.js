@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
@@ -7,7 +8,7 @@ const FeatureGrid = ({ gridItems }) => (
       <div key={item.image} className="column is-6">
         <section className="section">
           <p className="has-text-centered">
-            <img alt="" src={item.image} />
+            <Img alt="" fluid={item.image.childImageSharp.fluid} />
           </p>
           <p>{item.text}</p>
         </section>
@@ -19,7 +20,7 @@ const FeatureGrid = ({ gridItems }) => (
 FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(
     PropTypes.shape({
-      image: PropTypes.string,
+      image: PropTypes.object,
       text: PropTypes.string,
     })
   ),
