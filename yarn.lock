@@ -5087,8 +5087,8 @@ fstream@^1.0.0, fstream@^1.0.2:
     rimraf "2"
 
 fswatcher-child@^1.0.3:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/fswatcher-child/-/fswatcher-child-1.1.0.tgz#af1650590f897532431731247fd6270f333912ff"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/fswatcher-child/-/fswatcher-child-1.1.1.tgz#264dd95f9c4b5f8615327d7d7567884591846b9b"
   dependencies:
     chokidar "^2.0.3"
 
