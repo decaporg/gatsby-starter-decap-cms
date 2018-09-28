@@ -93,7 +93,7 @@ export const ProductPageTemplate = ({
               <Testimonials testimonials={testimonials} />
               <div
                 className="full-width-image-container"
-                style={{ backgroundImage: `url(${fullImage})` }}
+                style={{ backgroundImage: `url(${fullImage.childImageSharp.fluid.src})` }}
               />
               <h2 className="has-text-weight-semibold is-size-2">
                 {pricing.heading}
@@ -180,7 +180,7 @@ export const productPageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 478, quality: 50) {
+                fluid(maxWidth: 240, quality: 64) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -197,7 +197,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 64) {
+                fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -207,7 +207,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 64) {
+                fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -217,7 +217,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 1076, quality: 72) {
+                fluid(maxWidth: 1075, quality: 72) {
                   ...GatsbyImageSharpFluid
                 }
               }

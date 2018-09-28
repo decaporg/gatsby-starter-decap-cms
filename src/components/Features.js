@@ -8,7 +8,12 @@ const FeatureGrid = ({ gridItems }) => (
       <div key={item.image} className="column is-6">
         <section className="section">
           <p className="has-text-centered">
-            <Img alt="" fluid={item.image.childImageSharp.fluid} />
+            <div style={{
+              width: '240px',
+              display: 'inline-block',
+            }}>
+              <Img alt="" fluid={item.image.childImageSharp.fluid} />
+            </div>
           </p>
           <p>{item.text}</p>
         </section>
