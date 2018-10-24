@@ -64,14 +64,8 @@ export default class Contact extends React.Component {
           </div>
           <div className="field">
             <label className="label" htmlFor={"email"}>Email</label>
-              <div className="control has-icons-left has-icons-right">
+              <div className="control">
                 <input className="input" type={"email"} name={"email"} onChange={this.handleChange} id={"email"} required={"true"} />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-envelope"></i>
-                </span>
-                <span className="icon is-small is-right">
-                  <i className="fas fa-check"></i>
-                </span>
               </div>
           </div>
           <div className="field">
