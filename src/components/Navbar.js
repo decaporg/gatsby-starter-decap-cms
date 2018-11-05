@@ -23,9 +23,6 @@ const Navbar = () => (
         <Link className="navbar-item" to="/contact">
           Contact
         </Link>
-        <Link className="navbar-item" to="/contact/examples">
-          Submit Examples
-        </Link>
       </div>
       <div className="navbar-end">
         <a
