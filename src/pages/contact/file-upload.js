@@ -66,7 +66,7 @@ export default class Contact extends React.Component {
           <div className="field">
             <label className="label" htmlFor={"name"} >Your name</label>
             <div className="control">
-              <input className="input" type={"text"} name={"name"} onChange={this.handleChange} id={"name"} required={"true"} />
+              <input className="input" type={"text"} name={"name"} onChange={this.handleChange} id={"name"} required={true} />
             </div>
           </div>
           <div className="field">
