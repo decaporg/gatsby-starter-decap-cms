@@ -7,10 +7,8 @@ const Navbar = () => (
   <nav className="navbar is-transparent">
     <div className="container">
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
+        <Link to="/" className="navbar-item" title="Logo">
+          <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
         </Link>
       </div>
       <div className="navbar-start">
