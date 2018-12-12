@@ -49,8 +49,18 @@ export const IndexPageTemplate = ({
                   {title}
                 </h1>
               </div>
+              <div className="content">
+                  <div class="tile">
+                    <h1 class="title">Why Kaldi</h1>
+                  </div>
+                  <div class="tile">
+                  <h3 class="subtitle">
+                    Kaldi is the coffee store for everyone who believes that great coffee shouldn't just taste good, it should do good too. We source all of our beans directly from small scale sustainable farmers and make sure part of the profits are reinvested in their communities.
+                  </h3>
+              </div>
+              </div>
               <div className="columns">
-                <div className="column is-7">
+                <div className="column is-8">
                   <h3 className="has-text-weight-semibold is-size-2">
                     {heading}
                   </h3>
