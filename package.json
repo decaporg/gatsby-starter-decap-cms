@@ -42,10 +42,20 @@
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lh": "lighthouse-ci"
   },
   "devDependencies": {
+    "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netlify-templates/gatsby-starter-netlify-cms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/netlify-templates/gatsby-starter-netlify-cms/issues"
+  },
+  "homepage": "https://github.com/netlify-templates/gatsby-starter-netlify-cms#readme"
 }
