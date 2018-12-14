@@ -7358,6 +7358,13 @@ lie@3.1.1:
   dependencies:
     immediate "~3.0.5"
 
+"lighthouse-ci@git+https://github.com/ebidel/lighthouse-ci.git":
+  version "0.1.0"
+  resolved "git+https://github.com/ebidel/lighthouse-ci.git#b0e8f0d503ce6cb630d599d3e309d1b804fb5d20"
+  dependencies:
+    minimist "^1.2.0"
+    node-fetch "^2.2.0"
+
 load-bmfont@^1.2.3:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/load-bmfont/-/load-bmfont-1.4.0.tgz#75f17070b14a8c785fe7f5bee2e6fd4f98093b6b"
@@ -8478,6 +8485,10 @@ node-fetch@^1.0.1:
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
+
+node-fetch@^2.2.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
 
 node-forge@0.7.5:
   version "0.7.5"
