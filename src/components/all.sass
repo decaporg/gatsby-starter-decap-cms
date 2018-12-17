@@ -8,6 +8,7 @@ $kaldi-red-invert: #fff
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
+$black: #2b2523
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -43,5 +44,18 @@ $body-color: #333
 
 .margin-top-0
   margin-top: 0 !important
+
+.navbar-item .icon 
+  color: $primary
+// Overrode for use of svg's from https://simpleicons.org/
+.icon svg 
+  width: 1.5rem
+  height: 1.5rem
+  fill: currentColor;
+.navbar-brand .navbar-item.logo
+  padding: 0 1rem
+footer.footer
+  padding: 3rem 0rem 0rem
+  background-color: transparent
 
 @import "~bulma"
