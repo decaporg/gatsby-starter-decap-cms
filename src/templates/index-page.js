@@ -32,11 +32,11 @@ export const IndexPageTemplate = ({
                     !!image.childImageSharp
                       ? image.childImageSharp.fluid.src
                       : image
-                  })`, 
+                  })`,
                   backgroundPosition: `center center`,
                   backgroundAttachment: `fixed`,
-                 }}
-                >
+                }}
+              >
                 <h1
                   className="has-text-weight-bold is-size-2"
                   style={{
@@ -50,14 +50,18 @@ export const IndexPageTemplate = ({
                 </h1>
               </div>
               <div className="content">
-                  <div class="tile">
-                    <h1 class="title">Why Kaldi</h1>
-                  </div>
-                  <div class="tile">
-                  <h3 class="subtitle">
-                    Kaldi is the coffee store for everyone who believes that great coffee shouldn't just taste good, it should do good too. We source all of our beans directly from small scale sustainable farmers and make sure part of the profits are reinvested in their communities.
+                <div className="tile">
+                  <h1 className="title">Why Kaldi</h1>
+                </div>
+                <div className="tile">
+                  <h3 className="subtitle">
+                    Kaldi is the coffee store for everyone who believes that
+                    great coffee shouldn't just taste good, it should do good
+                    too. We source all of our beans directly from small scale
+                    sustainable farmers and make sure part of the profits are
+                    reinvested in their communities.
                   </h3>
-              </div>
+                </div>
               </div>
               <div className="columns">
                 <div className="column is-8">
@@ -81,7 +85,7 @@ export const IndexPageTemplate = ({
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
                       <article className="tile is-child">
-                       <PreviewCompatibleImage imageInfo={main.image1} />
+                        <PreviewCompatibleImage imageInfo={main.image1} />
                       </article>
                     </div>
                     <div className="tile is-parent">
@@ -128,7 +132,7 @@ IndexPageTemplate.propTypes = {
     heading: PropTypes.string,
     description: PropTypes.string,
     image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }),
   testimonials: PropTypes.array,
   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

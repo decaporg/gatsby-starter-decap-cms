@@ -29,7 +29,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         image2: {
           image: getAsset(entry.getIn(['data', 'main', 'image2', 'image'])),
           alt: entry.getIn(['data', 'main', 'image2', 'alt']),
-        }
+        },
       }}
       fullImage={entry.getIn(['data', 'full_image'])}
       testimonials={testimonials}
