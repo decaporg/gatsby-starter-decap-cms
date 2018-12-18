@@ -8,7 +8,7 @@
 		command = "npm run build && npm run lh https://deploy-preview-155--gatsby-netlify-cms.netlify.com/"
 [context.deploy-preview.environment]
     TRAVIS_PULL_REQUEST = "155"
-    TRAVIS_PULL_REQUEST_SHA = COMMIT_REF
+    TRAVIS_PULL_REQUEST_SHA = "2c0838c029e49870b7e5c25aa34c1533379903a8"
     TRAVIS_PULL_REQUEST_SLUG = "netlify-templates/gatsby-starter-netlify-cms"
     TRAVIS_EVENT_TYPE = "pull_request"
 
