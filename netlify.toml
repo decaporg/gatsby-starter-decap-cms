@@ -5,4 +5,4 @@
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
 [context.deploy-preview]
-		build = “npm run lh https://gatsby-netlify-cms.netlify.com"
+		build = "npm run lh https://gatsby-netlify-cms.netlify.com"
