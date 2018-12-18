@@ -4,5 +4,11 @@
 [build.environment]
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
-[context.deploy-preview]
+ [context.deploy-preview]
 		command = "npm run build && npm run lh https://deploy-preview-155--gatsby-netlify-cms.netlify.com/"
+[context.deploy-preview.environment]
+    TRAVIS_PULL_REQUEST = "155"
+    TRAVIS_PULL_REQUEST_SHA = "3df41368304ab7c3d6ece518504e3c9225863f0b"
+    TRAVIS_PULL_REQUEST_SLUG = "netlify-templates/gatsby-starter-netlify-cms"
+
+    
