@@ -5,9 +5,9 @@
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
 [context.deploy-preview]
-		command = "npm run build && sed -i s/API_KEY_PLACEHOLDER/$COMMIT_REF/g netlify.toml && npm run lh https://deploy-preview-155--gatsby-netlify-cms.netlify.com/"
+		command = "npm run build && sed -i s/API_KEY_PLACEHOLDER/$COMMIT_REF/g netlify.toml && sed -i s/API_KEY_PLACEHOLDER/$REVIEW_ID/g netlify.toml && sed -i s/API_KEY_PLACEHOLDER/$DEPLOY_PRIME_URL/g netlify.toml && npm run lh DEPLOY_PRIME_URL"
 [context.deploy-preview.environment]
-    TRAVIS_PULL_REQUEST = "155"
+    TRAVIS_PULL_REQUEST = "REVIEW_ID"
     TRAVIS_PULL_REQUEST_SHA = "COMMIT_REF"
     TRAVIS_PULL_REQUEST_SLUG = "netlify-templates/gatsby-starter-netlify-cms"
     TRAVIS_EVENT_TYPE = "pull_request"
