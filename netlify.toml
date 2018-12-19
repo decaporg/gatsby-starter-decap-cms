@@ -5,7 +5,7 @@
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
 [context.deploy-preview]
-		command = "npm run build && sed -i 's/API_KEY_PLACEHOLDER/$COMMIT_REF/g ; s/API_KEY_PLACEHOLDER/$REVIEW_ID/g' netlify.toml && npm run lh https://deploy-preview-REVIEW_ID-gatsby-netlify-cms.netlify.com/"
+		command = "sed -i 's/API_KEY_PLACEHOLDER/$COMMIT_REF/g ; s/API_KEY_PLACEHOLDER/$REVIEW_ID/g' netlify.toml && npm run build && npm run lh https://deploy-preview-REVIEW_ID-gatsby-netlify-cms.netlify.com/"
 [context.deploy-preview.environment]
     TRAVIS_PULL_REQUEST = "REVIEW_ID"
     TRAVIS_PULL_REQUEST_SHA = "COMMIT_REF"
