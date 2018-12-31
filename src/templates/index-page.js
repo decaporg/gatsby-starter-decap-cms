@@ -12,6 +12,7 @@ export const IndexPageTemplate = ({
   image,
   title,
   heading,
+  subheading,
   description,
   intro,
   main,
@@ -48,6 +49,16 @@ export const IndexPageTemplate = ({
                 >
                   {title}
                 </h1>
+                <span className="has-text-weight-bold is-size-4"
+                    style={{
+                      boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
+                      backgroundColor: '#f40',
+                      color: 'white',
+                      padding: '1rem',
+                    }}
+                >
+                  {subheading}
+                </span>
               </div>
               <div className="content">
                 <div className="tile">
@@ -124,6 +135,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
+  subheading: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -152,6 +164,7 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
+        subheading={frontmatter.subheading}
         description={frontmatter.description}
         intro={frontmatter.intro}
         main={frontmatter.main}
@@ -186,6 +199,7 @@ export const pageQuery = graphql`
           }
         }
         heading
+        subheading
         description
         intro {
           blurbs {
