@@ -1,8 +1,9 @@
 ---
-templateKey: index-page
-title: 'What we offer'
-image: /img/jumbotron.jpg
-heading: What we offer
+templateKey: 'index-page'
+title: 'Great coffee with a conscience'
+image: /img/home-jumbotron.jpg
+heading: Great coffee with a conscience
+subheading: Support sustainable farming while enjoying a cup
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
