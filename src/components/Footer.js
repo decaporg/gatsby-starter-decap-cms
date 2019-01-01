@@ -22,7 +22,6 @@ const Footer = class extends React.Component {
           <div className="container has-background-black has-text-white-ter">
               <div className="columns">
                 <div className="column is-4">
-                <p className="menu-label">KALDI</p>
                 <section className="menu">
                     <ul className="menu-list">
                       <li><Link to="/" className="navbar-item">Home</Link></li>
@@ -49,7 +48,6 @@ const Footer = class extends React.Component {
                 </div>
                 <div className="column is-4">
                 <section>
-                  <p className="menu-label">Find out more</p>
                   <ul className="menu-list">
                   <li><Link className="navbar-item" to="/contact">
                       Schedule and appointment
@@ -58,25 +56,21 @@ const Footer = class extends React.Component {
                 </section>
                 </div>
                 <div className="column is-4 social">
-                <p className="menu-label">Social media</p>
+                
                   <a title="facebook" href="https://facebook.com">
-                  
                     <img 
                       src={facebook}
                       alt="Facebook"
                       style={{ width: '1em', height: '1em' }}
                     />
-                  
                   </a>
                   <a title="twitter" href="https://twitter.com">
-                  
                   <img
                     className="fas fa-lg"
                     src={twitter}
                     alt="Twitter"
                     style={{ width: '1em', height: '1em' }}
                   />
-                  
                 </a>
                 <a title="instagram" href="https://instagram.com">
                   <img
