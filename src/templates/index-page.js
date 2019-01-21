@@ -4,13 +4,13 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
-//import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
   subheading,
+  mainpitch,
   description,
   intro,
   main,
@@ -68,16 +68,10 @@ export const IndexPageTemplate = ({
             <div className="content">
               <div className="content">
                 <div className="tile">
-                  <h1 className="title">Why Kaldi</h1>
+                  <h1 className="title">{mainpitch.title}</h1>
                 </div>
                 <div className="tile">
-                  <h3 className="subtitle">
-                    Kaldi is the coffee store for everyone who believes that
-                    great coffee shouldn't just taste good, it should do good
-                    too. We source all of our beans directly from small scale
-                    sustainable farmers and make sure part of the profits are
-                    reinvested in their communities.
-                  </h3>
+                  <h3 className="subtitle">{mainpitch.description}</h3>
                 </div>
               </div>
               <div className="columns">
@@ -110,6 +104,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
+  mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -126,6 +121,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
+        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -144,8 +140,8 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query IndexPageTemplate($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+query IndexPageTemplate {
+  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
       frontmatter {
         title
         image {
@@ -157,6 +153,10 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        mainpitch {
+          title
+          description
+        }
         description
         intro {
           blurbs {
