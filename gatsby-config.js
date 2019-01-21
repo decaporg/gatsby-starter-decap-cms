@@ -1,3 +1,5 @@
+const fsApi = require('netlify-cms-backend-fs/dist/fs/fs-express-api')
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',
@@ -62,6 +64,7 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
+        manualInit: true
       },
     },
     {
@@ -73,4 +76,5 @@ module.exports = {
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
+  developMiddleware: fsApi
 }
