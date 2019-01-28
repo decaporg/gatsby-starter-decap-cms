@@ -41,6 +41,9 @@ about: Create a report to help us improve
 <!-- Explain exactly how it should behave -->
 
 **Other relevant information:**
+
+<!--Run `gatsby info --clipboard` in your project directory and paste the output here. Not working? You may need to update your global gatsby-cli - `npm install -g gatsby-cli` -->
+
 Node.js version: 
 NPM/Yarn version
 Operating System: 
