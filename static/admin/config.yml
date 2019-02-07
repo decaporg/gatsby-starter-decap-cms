@@ -11,14 +11,17 @@ collections:
     folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-
+   -fields: 
+    -{label: "FrontPic", name: "thumbnail", widget: "image"}
+    -{label: "Description", name: "description", widget: "text"}
+    -{label: "carousel", name: "thumbnail", media_library:
+    config:
+      multiple: true}
+    -{label: "card", name: "card", widget: "object", fields:
+        -{label: "title", name: "title", widget: "string"}
+        -{label: "description", name: "description", widget: "text"}
+        -{label: "image", name: "thumbnail", widget: "image"}
+    }
   - name: "pages"
     label: "Pages"
     files:
