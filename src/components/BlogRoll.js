@@ -16,7 +16,7 @@ class BlogRoll extends React.Component {
               className="is-parent column is-6"
               key={post.id}
             >
-            <article class="tile is-child box notification">
+            <article className="tile is-child box notification">
               <p>
                 <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
                   {post.frontmatter.title}
