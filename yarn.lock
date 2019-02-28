@@ -7440,9 +7440,9 @@ netlify-cms-backend-bitbucket@^2.1.1:
     js-base64 "^2.4.8"
     semaphore "^1.1.0"
 
-netlify-cms-backend-git-gateway@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-backend-git-gateway/-/netlify-cms-backend-git-gateway-2.2.1.tgz#0b022a75d8efc245397a02f168d95957640bb4e5"
+netlify-cms-backend-git-gateway@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/netlify-cms-backend-git-gateway/-/netlify-cms-backend-git-gateway-2.2.2.tgz#69d7c992aca1f8183ee8f616f288c83a5a3c3429"
   dependencies:
     gotrue-js "^0.9.22"
     ini "^1.3.5"
@@ -7651,14 +7651,14 @@ netlify-cms-widget-text@^2.0.6:
   dependencies:
     react-textarea-autosize "^7.0.0"
 
-netlify-cms@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-2.5.0.tgz#745763f674a0904b739317bf1bc32ef7ab73ce19"
+netlify-cms@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-2.5.1.tgz#1cad63ee6d458bae9b52b6a56c832a13aff07f4f"
   dependencies:
     create-react-class "^15.6.0"
     emotion "^9.2.6"
     netlify-cms-backend-bitbucket "^2.1.1"
-    netlify-cms-backend-git-gateway "^2.2.1"
+    netlify-cms-backend-git-gateway "^2.2.2"
     netlify-cms-backend-github "^2.2.1"
     netlify-cms-backend-gitlab "^2.1.2"
     netlify-cms-backend-test "^2.0.6"
