@@ -1,4 +1,9 @@
-# Gatsby + Netlify CMS Starter
+# Gatsby + Netlify CMS Starter + Typescript + Styled Component
+
+I found myself always adding this things so I forked this very good project and I will try to keep it up with the original
+
+## Todo
+- Remove sass and bulma and go 100% styled components
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
 

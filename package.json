@@ -7,12 +7,15 @@
     "bulma": "^0.7.0",
     "gatsby": "^2.0.66",
     "gatsby-image": "^2.0.23",
+    "gatsby-plugin-manifest": "^2.0.19",
     "gatsby-plugin-netlify": "^2.0.6",
     "gatsby-plugin-netlify-cms": "^3.0.9",
     "gatsby-plugin-purgecss": "^3.1.0",
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-sass": "^2.0.7",
     "gatsby-plugin-sharp": "^2.0.15",
+    "gatsby-plugin-styled-components": "^3.0.6",
+    "gatsby-plugin-typescript": "^2.0.9",
     "gatsby-remark-copy-linked-files": "^2.0.7",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-relative-images": "^0.2.1",
@@ -28,6 +31,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "styled-components": "^4.1.3",
     "uuid": "^3.2.1"
   },
   "keywords": [
@@ -45,7 +49,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.121",
+    "@types/netlify-identity-widget": "^1.4.1",
+    "@types/react-helmet": "^5.0.8",
+    "@types/styled-components": "^4.1.10",
+    "babel-plugin-styled-components": "^1.10.0",
     "prettier": "^1.15.3",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "typescript": "^3.3.3333"
   }
 }
