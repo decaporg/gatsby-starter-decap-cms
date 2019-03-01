@@ -18,15 +18,13 @@ const Navbar = class extends React.Component {
           // Get the target from the "data-target" attribute
           const target = el.dataset.target
           const $target = document.getElementById(target)
-
           // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
           el.classList.toggle('is-active')
-          $target.classList.toggle('is-active')
+          $target && $target.classList.toggle('is-active')
         })
       })
     }
   }
-
   render() {
     return (
       <nav
@@ -39,7 +37,7 @@ const Navbar = class extends React.Component {
             <Link to="/" className="navbar-item" title="Logo">
               <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
             </Link>
-            {/* Hamburger menu */}
+
             <div className="navbar-burger burger" data-target="navMenu">
               <span />
               <span />
@@ -82,5 +80,4 @@ const Navbar = class extends React.Component {
     )
   }
 }
-
 export default Navbar

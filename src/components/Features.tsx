@@ -1,8 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { GatsbyImageProps } from 'gatsby-image'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-const FeatureGrid = ({ gridItems }) => (
+type ImageSharp = {
+  childImageSharp: GatsbyImageProps
+}
+
+type FeatureGridProps = {
+  gridItems: {
+    image?: ImageSharp | string
+    text: string
+  }[]
+}
+
+const FeatureGrid: React.SFC<FeatureGridProps> = ({ gridItems }) => (
   <div className="columns is-multiline">
     {gridItems.map(item => (
       <div key={item.text} className="column is-6">
@@ -11,7 +22,7 @@ const FeatureGrid = ({ gridItems }) => (
             <div
               style={{
                 width: '240px',
-                display: 'inline-block',
+                display: 'inline-block'
               }}
             >
               <PreviewCompatibleImage imageInfo={item} />
@@ -23,14 +34,4 @@ const FeatureGrid = ({ gridItems }) => (
     ))}
   </div>
 )
-
-FeatureGrid.propTypes = {
-  gridItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-      text: PropTypes.string,
-    })
-  ),
-}
-
 export default FeatureGrid
