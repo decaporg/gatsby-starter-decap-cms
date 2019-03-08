@@ -1,12 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { ReactNode, FC, ReactElement } from 'react'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const BlogPostTemplate = ({
+export const BlogPostTemplate: FC<BlogPostTemplateProps> = ({
   content,
   contentComponent,
   description,
@@ -46,15 +45,16 @@ export const BlogPostTemplate = ({
   )
 }
 
-BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
+type BlogPostTemplateProps = {
+  content: ReactNode,
+  contentComponent: any,
+  description: string,
+  title: string,
+  helmet: ReactNode,
+  tags: string[]
 }
 
-const BlogPost = ({ data }) => {
+const BlogPost: FC<Props> = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
@@ -79,10 +79,13 @@ const BlogPost = ({ data }) => {
   )
 }
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+type Props = {
+  data: {
+    markdownRemark: {
+      frontmatter: BlogPostTemplateProps
+      html: string
+    }
+  }
 }
 
 export default BlogPost
