@@ -45,7 +45,7 @@ type ProductPageTemplateProps = {
     author: string
     quote: string
   }[]
-  fullImage: Image
+  full_image: Image
   pricing: {
     heading: string
     description: string
@@ -65,7 +65,7 @@ export const ProductPageTemplate: FC<ProductPageTemplateProps> = ({
   intro,
   main,
   testimonials,
-  fullImage,
+  full_image,
   pricing
 }) => (
   <section className="section section--gradient">
@@ -135,9 +135,9 @@ export const ProductPageTemplate: FC<ProductPageTemplateProps> = ({
                 className="full-width-image-container"
                 style={{
                   backgroundImage: `url(${
-                    fullImage && typeof fullImage !== 'string'
-                      ? get(fullImage, 'childImageSharp.fluid.src')
-                      : fullImage
+                    full_image && typeof full_image !== 'string'
+                      ? get(full_image, 'childImageSharp.fluid.src')
+                      : full_image
                   })`
                 }}
               />
@@ -171,7 +171,7 @@ const ProductPage: FC<Props> = ({ data }) => {
         intro={frontmatter.intro}
         main={frontmatter.main}
         testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.fullImage}
+        full_image={frontmatter.full_image}
         pricing={frontmatter.pricing}
       />
     </Layout>
@@ -244,7 +244,7 @@ export const productPageQuery = graphql`
           author
           quote
         }
-        full_image: fullImage {
+        full_image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
