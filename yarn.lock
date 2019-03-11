@@ -7444,9 +7444,9 @@ netlify-cms-backend-bitbucket@^2.1.2:
     js-base64 "^2.4.8"
     semaphore "^1.1.0"
 
-netlify-cms-backend-git-gateway@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/netlify-cms-backend-git-gateway/-/netlify-cms-backend-git-gateway-2.2.3.tgz#eafb23463fc9e37572d3b82386564e02b9b11f58"
+netlify-cms-backend-git-gateway@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/netlify-cms-backend-git-gateway/-/netlify-cms-backend-git-gateway-2.2.4.tgz#a72cf0c5f0f0475d1677a11325ecdcd9ea220918"
   dependencies:
     gotrue-js "^0.9.22"
     ini "^1.3.5"
@@ -7634,9 +7634,9 @@ netlify-cms-widget-object@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-object/-/netlify-cms-widget-object-2.0.6.tgz#204ee9e35543541f49bb38ebf12ef249e6832618"
 
-netlify-cms-widget-relation@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-widget-relation/-/netlify-cms-widget-relation-2.1.1.tgz#984a72b2643f70f08345df9582cda88d0db98e2e"
+netlify-cms-widget-relation@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/netlify-cms-widget-relation/-/netlify-cms-widget-relation-2.1.2.tgz#ac5289e12bf01f2d2c1e09f163fdab968ae7705b"
   dependencies:
     react-select "^2.3.0"
 
@@ -7656,14 +7656,14 @@ netlify-cms-widget-text@^2.0.6:
   dependencies:
     react-textarea-autosize "^7.0.0"
 
-netlify-cms@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-2.6.0.tgz#a0eadf551bdc6e3d05965bcb317742a86acacc59"
+netlify-cms@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-2.6.1.tgz#e353d5647539763823edd522f3556b72d5edc266"
   dependencies:
     create-react-class "^15.6.0"
     emotion "^9.2.6"
     netlify-cms-backend-bitbucket "^2.1.2"
-    netlify-cms-backend-git-gateway "^2.2.3"
+    netlify-cms-backend-git-gateway "^2.2.4"
     netlify-cms-backend-github "^2.2.2"
     netlify-cms-backend-gitlab "^2.1.3"
     netlify-cms-backend-test "^2.0.6"
@@ -7680,7 +7680,7 @@ netlify-cms@^2.6.0:
     netlify-cms-widget-markdown "^2.2.0"
     netlify-cms-widget-number "^2.1.1"
     netlify-cms-widget-object "^2.0.6"
-    netlify-cms-widget-relation "^2.1.1"
+    netlify-cms-widget-relation "^2.1.2"
     netlify-cms-widget-select "^2.2.0"
     netlify-cms-widget-string "^2.0.4"
     netlify-cms-widget-text "^2.0.6"
