@@ -44,10 +44,10 @@ export const IndexPageTemplate: FC<IndexPageTemplateProps> = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          typeof image !== 'string' ? get(image, 'childImageSharp.fluid.src') : image
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
+        backgroundAttachment: `fixed`,
       }}
     >
       <div
@@ -57,17 +57,18 @@ export const IndexPageTemplate: FC<IndexPageTemplateProps> = ({
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
-          flexDirection: 'column'
+          flexDirection: 'column',
         }}
       >
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow: 'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
+            boxShadow:
+              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
             backgroundColor: 'rgb(255, 68, 0)',
             color: 'white',
             lineHeight: '1',
-            padding: '0.25em'
+            padding: '0.25em',
           }}
         >
           {title}
@@ -75,11 +76,12 @@ export const IndexPageTemplate: FC<IndexPageTemplateProps> = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow: 'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
+            boxShadow:
+              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
             backgroundColor: 'rgb(255, 68, 0)',
             color: 'white',
             lineHeight: '1',
-            padding: '0.25em'
+            padding: '0.25em',
           }}
         >
           {subheading}
@@ -102,7 +104,9 @@ export const IndexPageTemplate: FC<IndexPageTemplateProps> = ({
                 </div>
                 <div className="columns">
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      {heading}
+                    </h3>
                     <p>{description}</p>
                   </div>
                 </div>
@@ -115,7 +119,9 @@ export const IndexPageTemplate: FC<IndexPageTemplateProps> = ({
                   </div>
                 </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
+                  <h3 className="has-text-weight-semibold is-size-2">
+                    Latest stories
+                  </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
