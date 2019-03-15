@@ -5,10 +5,10 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.7.0",
-    "gatsby": "^2.0.66",
+    "gatsby": "^2.1.34",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-netlify": "^2.0.6",
-    "gatsby-plugin-netlify-cms": "^3.0.9",
+    "gatsby-plugin-netlify-cms": "^3.0.15",
     "gatsby-plugin-purgecss": "^3.1.0",
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-sass": "^2.0.7",
@@ -16,8 +16,8 @@
     "gatsby-remark-copy-linked-files": "^2.0.7",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-relative-images": "^0.2.1",
-    "gatsby-source-filesystem": "^2.0.12",
-    "gatsby-transformer-remark": "^2.1.15",
+    "gatsby-source-filesystem": "^2.0.26",
+    "gatsby-transformer-remark": "^2.3.4",
     "gatsby-transformer-sharp": "^2.1.9",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
@@ -25,8 +25,8 @@
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.4.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "uuid": "^3.2.1"
   },
@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "http-proxy-middleware": "^0.19.1",
-    "netlify-lambda": "^1.4.2",
+    "netlify-lambda": "^1.4.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2"
