@@ -22,6 +22,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Netlify deploy configuration
 - Netlify function support, see `src/lambda` folder
 - Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
+- Web app manifest and app icons (favicon) generated from a source SVG with `gatsby-plugin-manifest`. Note that generated icons are code-committed to reduce production build time, and should be re-committed whenever the source SVG changes.
 - ..and more
 
 ## Prerequisites
