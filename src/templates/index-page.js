@@ -14,7 +14,6 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  main,
 }) => (
   <div>
     <div
