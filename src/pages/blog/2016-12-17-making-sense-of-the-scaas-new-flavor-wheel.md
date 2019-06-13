@@ -1,10 +1,12 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel
+title: NEXT-GEN THINKING AND WORKINGNEXT-GEN THINKING AND WORKING
 date: 2016-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/flavor_wheel.jpg
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+description: World-wide certified “Freelance as a Service” business to business.
+
+
 tags:
   - flavor
   - tasting
@@ -12,23 +14,22 @@ tags:
 
 ![flavor wheel](/img/flavor_wheel.jpg)
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
+Linux System Administration
+This role requires extensive familiarity with Linux systems and servers and may involve a high level of risk assessment and user support. Because Linux is an open-source operating system, administrators also frequently communicate and collaborate with other developers to develop and implement system enhancements.
 
-## What the updates mean to you
+DevOps
+A penetration test, colloquially known as a pen test, is an authorized simulated cyberattack on a computer system, performed to evaluate the security of the system.
 
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
+Source Code Review
+The aim of the Source Code Review module is identify the existence of any coding vulnerability that affect the software executionn.
 
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
+Security Consulting
+We deliver world-class offerings, security knowledge and experience to provide you with comprehensive information security.
 
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
+Training
+Ethical hacking, CCNA Security, LINUX LPIC, C/C++, Python and more from our training experts.
 
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
-
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+NEXT-GEN THINKING AND WORKING
+High-tech Solutions
+Side project: CyberEntity Linux - The Next-Gen Penetration Testing Distro
