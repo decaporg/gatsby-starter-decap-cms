@@ -9098,10 +9098,10 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-netlify-cms-app@^2.9.2:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.9.2.tgz#ad03a7ee8c1e2a28702a0bfb03f51d0396ccf243"
-  integrity sha512-03gZ3HVOV92hgDFvZ6jQvRwmxq4YPtncHj6Lj/eBt+bVZvaGjWKJjxl9fisTuHwWDEu078QODNHNQ1vuQ5kJww==
+netlify-cms-app@^2.9.3:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.9.3.tgz#567f5ae0e7aeb865318b28c1c99eeaa63a9906d2"
+  integrity sha512-joWwtBAURHZeJhVti8kvzw9ukBe60lQeEPbgc7aqQ0lGc2fmI/LuiBAIxUzjs0JnCujn/5/64d18ET3Hwg35yA==
   dependencies:
     "@emotion/core" "^10.0.9"
     "@emotion/styled" "^10.0.9"
@@ -9109,7 +9109,7 @@ netlify-cms-app@^2.9.2:
     lodash "^4.17.11"
     moment "^2.24.0"
     netlify-cms-backend-bitbucket "^2.4.0"
-    netlify-cms-backend-git-gateway "^2.4.2"
+    netlify-cms-backend-git-gateway "^2.4.3"
     netlify-cms-backend-github "^2.4.2"
     netlify-cms-backend-gitlab "^2.3.2"
     netlify-cms-backend-test "^2.2.2"
@@ -9144,10 +9144,10 @@ netlify-cms-backend-bitbucket@^2.4.0:
     js-base64 "^2.5.1"
     semaphore "^1.1.0"
 
-netlify-cms-backend-git-gateway@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/netlify-cms-backend-git-gateway/-/netlify-cms-backend-git-gateway-2.4.2.tgz#a6aaeb0537c788fbdf599e1e4fbb37c6f39b266f"
-  integrity sha512-DdpsJR9F6UjlVCq2TzWXeP7u+VbHsLaV1x47O69G111jOZnXcDaqCsoAzF19qzKfvMTeSRNx0L+zRaFcrApnHQ==
+netlify-cms-backend-git-gateway@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/netlify-cms-backend-git-gateway/-/netlify-cms-backend-git-gateway-2.4.3.tgz#49c999529d9e9f59e411dd05f5e8af1a7978e7a3"
+  integrity sha512-BEuL7x1OSFDfWCLUbmNa3CqKA7VIuLY4LILL62qNRgsqzjQ8Hn2HNyTPyHD3ubb+aEHeaAyWNWzAmfWizTWwXA==
   dependencies:
     gotrue-js "^0.9.24"
     ini "^1.3.5"
