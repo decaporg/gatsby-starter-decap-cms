@@ -9098,10 +9098,10 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-netlify-cms-app@^2.9.4:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.9.4.tgz#24a9953daa6ed344fc2a56fb6acd92b391f3ac9c"
-  integrity sha512-Deyb2d/kb9xGiT42jCcrNfGFGgZ8ObNqwJSD3Qb0u71ivhC9nNSDYHyEm2ZEU5LaLRExW31+N3e0IvAwFzuxbA==
+netlify-cms-app@^2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.9.5.tgz#3e21c67e8c2a8a6e4edbadc662add0114ad88a66"
+  integrity sha512-17ZvgGYigas7d3KowcfFs+1MyDzGYT11LE9Yx4gmNxAoGx7Cw3hEZG3EVYPMwFk842uu87N6hCKMFfYioTk1Rg==
   dependencies:
     "@emotion/core" "^10.0.9"
     "@emotion/styled" "^10.0.9"
@@ -9113,7 +9113,7 @@ netlify-cms-app@^2.9.4:
     netlify-cms-backend-github "^2.4.2"
     netlify-cms-backend-gitlab "^2.3.2"
     netlify-cms-backend-test "^2.2.2"
-    netlify-cms-core "^2.12.0"
+    netlify-cms-core "^2.12.1"
     netlify-cms-editor-component-image "^2.4.2"
     netlify-cms-lib-auth "^2.2.3"
     netlify-cms-lib-util "^2.3.2"
@@ -9176,10 +9176,10 @@ netlify-cms-backend-test@^2.2.2:
   resolved "https://registry.yarnpkg.com/netlify-cms-backend-test/-/netlify-cms-backend-test-2.2.2.tgz#fc66afe3de1e74dc40f17b5989731c0d2c3b601e"
   integrity sha512-E1fstwZMoY3edVDLDZnUDvLpJI1RbUxUTtqK65CmSsamUT8mOoGf1cS4U+ifXw3xdvf/JFeEEucdjo0smbO8xA==
 
-netlify-cms-core@^2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms-core/-/netlify-cms-core-2.12.0.tgz#789f8198f4b8fb1622f765ec99ed6602cc4f082e"
-  integrity sha512-lvqSFh++kz8PNOFKW5YwSmkL/q3Y3Kf+0/IC3tedWYEZaA8M7xVDIbZn+WvNU/7MelJf1JsaxERKpThSY8w4mg==
+netlify-cms-core@^2.12.1:
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/netlify-cms-core/-/netlify-cms-core-2.12.1.tgz#79956ac7d798ac67a1c8610becf6bf8166d8e524"
+  integrity sha512-o03qX3AFOIoo0sGR5dg6IM+GCCr8pQJTI5uJKVF8/ZEGBftNqNhgfeevYCPZgypRccmuUqLVlzsxrJ/CkRX3EA==
   dependencies:
     ajv "^6.10.0"
     ajv-errors "^1.0.1"
