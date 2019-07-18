@@ -1,140 +1,279 @@
-@import "~bulma/sass/utilities/initial-variables"
+// @import "~bulma/sass/utilities/initial-variables"
 
-// Config vars
-// Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+// // Config vars
+// // Kaldi logo brand color: #FD461E
+// $kaldi-red: #D64000
+// $kaldi-red-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
-$body-color: #333
-$black: #2b2523
+// $primary: $kaldi-red
+// $primary-invert: $kaldi-red-invert
+// $body-color: #333
+// $black: #2b2523
 
-.navbar .navbar-menu
-  box-shadow:none !important
+// .navbar .navbar-menu
+//   box-shadow:none !important
 
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+// .content .taglist
+//   list-style: none
+//   margin-bottom: 0
+//   margin-left: 0
+//   margin-right: 1.5rem
+//   margin-top: 1.5rem
+//   display: flex
+//   flex-wrap: wrap
+//   justify-content: left
+//   align-items: center
+//   li
+//     padding: 0 2rem 1rem 0
+//     margin-bottom: 1.5rem
+//     margin-top: 0
 
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 2em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
+// // Helper Classes
+// .full-width-image-container
+//   width: 100vw
+//   height: 400px
+//   position: relative
+//   left: 50%
+//   right: 50%
+//   margin: 2em -50vw
+//   background-size: cover
+//   background-position: bottom
+//   display: flex
+//   justify-content: center
+//   align-items: center
 
-.full-width-image
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
+// .full-width-image
+//     width: 100vw
+//     height: 400px
+//     background-size: cover
+//     background-position: bottom
+//     display: flex
+//     justify-content: center
+//     align-items: center
 
-.btn
+// .btn
+//     display: inline-block
+//     padding: 12px 16px 10px
+//     font-size: 18px
+//     font-size: 1rem
+//     line-height: 1.25
+//     background-color: #fff
+//     border-radius: .25rem
+//     text-decoration: none
+//     font-weight: 700
+//     color: #CC3700
+//     text-align: center
+//     -webkit-box-shadow: inset 0 0 0 2px #CC3700
+//     box-shadow: inset 0 0 0 2px #f40
+//     -webkit-transition: all .15s ease
+//     transition: all .15s ease
+
+// .margin-top-0
+//   margin-top: 0 !important
+
+// .navbar-item .icon
+//   color: $primary
+// // Override for use of svg's from https://simpleicons.org/
+// .icon svg
+//   width: 1.5rem
+//   height: 1.5rem
+//   fill: currentColor
+// .navbar-brand .navbar-item.logo
+//   padding: 0 1rem
+// footer.footer
+//   padding: 3rem 0rem 0rem
+//   background-color: transparent
+
+// //Menu overrides
+// $menu-item-color: $white-ter
+// $menu-item-hover-color: $black !important
+// $menu-item-hover-background-color: $black
+// $menu-item-active-color: $kaldi-red-invert
+// $menu-item-active-background-color:	$kaldi-red-invert
+// $menu-list-border-left: 1px solid $kaldi-red-invert
+// $menu-label-color: $white-ter
+
+
+// .menu-label
+//   font-size: 1em !important
+//   text-align: left
+// .menu-list
+//   list-style: none !important
+//   text-align: left
+// .social
+//   padding: 2em
+// .social a
+//     padding: .5em .5em .3em .5em
+//     border-radius: 1em
+//     background-color: $white-ter
+//     margin: .5em
+//     width: 1em
+//     height: 1em
+//     vertical-align: middle
+//     display: inline
+
+// // blog roll
+// .blog-list-item.is-featured
+//   background-color: #d6400033;
+// .blog-list-item header
+//   display: flex;
+//   margin-bottom: 1em;
+// .blog-list-item .featured-thumbnail
+//   flex-basis: 35%;
+//   margin: 0 1.5em 0 0;
+
+
+// @import "~bulma"
+
+
+// // responsiveness
+// +tablet-only
+//   .blog-list-item .featured-thumbnail
+//     flex-basis: 50%;
+
+// +mobile
+//   .blog-list-item header
+//     display: block
+//   .blog-list-item .featured-thumbnail
+//     text-align: center;
+//     max-width: 70%;
+//     margin: 0 0 1em;
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  // UPDATED
+
+    
+$font-size: 18px
+$line-height: 1.48em
+$line-width: $font-size * 1.48 * 27.8
+
+$body: #F5F5F5
+$color: #233237
+$link: #0F1626
+$highlight: #FF533D
+$rust: #984B43
+
+body
+  font-size: 18px
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+  margin: 0
+  background: $body //linear-gradient(#CA6A2D, #783316)
+  min-height: 100vh
+  padding: 0 2rem 2rem 2rem
+
+.header
+  padding: 8rem 0 8rem 0
+  &__title
+    font-weight: 300
+    font-size: 5rem
+  &__subtitle
+    font-weight: 300
+    border-bottom: 2px solid $highlight
     display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
+    padding-bottom: 1rem
+    margin: 0
+
+.post
+  transition: background 300ms, color 300ms
+  color: $body
+  &__link
+    color: $link
     text-decoration: none
-    font-weight: 700
-    color: #CC3700
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
-
-.margin-top-0
-  margin-top: 0 !important
-
-.navbar-item .icon
-  color: $primary
-// Override for use of svg's from https://simpleicons.org/
-.icon svg
-  width: 1.5rem
-  height: 1.5rem
-  fill: currentColor
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
-footer.footer
-  padding: 3rem 0rem 0rem
-  background-color: transparent
-
-//Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
+    font-weight: 600
+    font-size: 1.4rem
+    &:hover
+      text-decoration: underline
+      color: $highlight
+  &__strangelove
+    color: $link
+    font-weight: 400
 
 
-.menu-label
-  font-size: 1em !important
-  text-align: left
-.menu-list
-  list-style: none !important
-  text-align: left
-.social
-  padding: 2em
-.social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
+.blog-post
+  max-width: $line-width
+  margin: 0 auto
+  line-height: $line-height
+  &__title
+    font-weight: 300
+    font-size: 4rem
+    line-height: 1.48em
+  &__subtitle
+    font-weight: 300
+    border-bottom: 2px solid $highlight
+    display: inline-block
+    padding-bottom: 1rem
+    margin: 0 0 3rem 0
 
-// blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033;
-.blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+.gatsby-highlight
+  margin-left: 1rem
+  margin-right: 1rem
+  margin-bottom: 2rem
+  pre
+    border-radius: 5px
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 20px 68px
+    padding: 1rem
 
+.blog-post
+  a
+    color: #9a2314
+    text-decoration: none
+    &:hover
+      color: $highlight
+      text-decoration: underline
 
-@import "~bulma"
+.blog-post ~ .nav
+  margin: 8rem auto 0 auto
 
+.nav
+  margin: 8rem 0 0 0
+  display: flex
+  flex-direction: column
+  border-bottom: 2px solid $highlight
+  max-width: $line-width
+  padding-bottom: 1rem
+  &__link
+    font-size: 1.2rem
+    font-weight: 500
+    text-decoration: none
+    color: $link
+    margin-top: 0.4rem
+    &:hover
+      text-decoration: underline
+      color: $highlight
 
-// responsiveness
-+tablet-only
-  .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
+.bio
+  display: flex
+  align-items: center
 
-+mobile
-  .blog-list-item header
-    display: block
-  .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+.logo
+  float: left
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4)
+  border-radius: 50%
+  overflow: hidden
+  width: 5rem
+  height: 5rem
+  margin-right: $line-height
+  &__img
+    z-index: -1
+    position: relative
+
+.tag-list
+  list-style: none
+  padding: 0 0 3rem 0
+  &__item
+    text-decoration: none
+    color: $link
+    &:hover
+      color: $highlight
+      text-decoration: underline
