@@ -6252,17 +6252,17 @@ gatsby-telemetry@^1.1.6:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby-transformer-remark@^2.3.4:
-  version "2.6.4"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.4.tgz#3987ccd94e51c67a5d4246efbfd2cb02aa7a5927"
-  integrity sha512-w8ZLjvHM1iWcAOewpOptHGB6PWHqIboYNRCkOJUG6R7Uxi/Aybwn/oeNwxx0wGmE6MCU+Su+taDSv4VDMxYolQ==
+gatsby-transformer-remark@^2.6.7:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.7.tgz#8478ca50818f9931004edb8b7fee59eb4e74fd8d"
+  integrity sha512-0Y14p1tpO/KGVHkKbAtYRn7ZjkdBdZzji7S2ZdCOuElGnK0FWTeYvgKCAiMiD0vQIOuuNtFrRovkakcbnLx6HQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
     gray-matter "^4.0.0"
     hast-util-raw "^4.0.0"
     hast-util-to-html "^4.0.0"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     mdast-util-to-hast "^3.0.0"
     mdast-util-to-string "^1.0.5"
     mdast-util-toc "^2.0.1"
