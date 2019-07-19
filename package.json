@@ -8,7 +8,7 @@
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-netlify": "^2.0.6",
-    "gatsby-plugin-netlify-cms": "^4.0.0",
+    "gatsby-plugin-netlify-cms": "^4.1.6",
     "gatsby-plugin-purgecss": "^4.0.0",
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-sass": "^2.0.7",
