@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "Devtings",
     description: "Adam Sanderson developer from Hastings",
-    siteUrl: "adamsanderson.co.uk"
+    siteUrl: "https://www.adamsanderson.co.uk"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
