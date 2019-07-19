@@ -3,7 +3,8 @@ var proxy = require("http-proxy-middleware");
 module.exports = {
   siteMetadata: {
     title: "Devtings",
-    description: "Adam Sanderson developer from Hastings"
+    description: "Adam Sanderson developer from Hastings",
+    siteUrl: "adamsanderson.co.uk"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
