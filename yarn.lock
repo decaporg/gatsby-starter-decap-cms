@@ -9605,9 +9605,9 @@ netlify-cms-lib-util@^2.3.2:
     localforage "^1.7.3"
 
 netlify-cms-media-library-cloudinary@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/netlify-cms-media-library-cloudinary/-/netlify-cms-media-library-cloudinary-1.3.2.tgz#da667a3404c93db9a41c8d65291a0d8c0aba6191"
-  integrity sha512-DAnhJ44JIXR5ORxK4B/Tx/ify76f9vMot5cTvSWlCoQtSdoZdv8y4yWStJapHyKhbpPoT3aSVFSeM7KJkKF9YA==
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/netlify-cms-media-library-cloudinary/-/netlify-cms-media-library-cloudinary-1.3.3.tgz#0edd153a4da51f4409947dfdef0bfa3699363d5b"
+  integrity sha512-+jJYgcCx/FU6pE5tEEjlrwGQBRnV/GJubFQ7GizRmnc/dU6YE9WUX522vQMWmCBx3rUQXR8tbh7IBmB663mBhw==
 
 netlify-cms-media-library-uploadcare@^0.5.2:
   version "0.5.2"
