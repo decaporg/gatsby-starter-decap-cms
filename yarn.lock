@@ -9735,9 +9735,9 @@ netlify-identity-widget@^1.4.11:
   integrity sha512-gCILbXMVn83TiRaiPCWk93ynyyYgxn8N/KoO+WOfyGZaNgq7gMMPtn7vo6VDe/ZczgyCn9DRlm3artNoj78/MQ==
 
 netlify-lambda@^1.4.3:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/netlify-lambda/-/netlify-lambda-1.5.0.tgz#52b1a16af73b3eeb1dee3c6178f189f010dd6450"
-  integrity sha512-Np1+dGu850o5qVzVlUlvuLD7M2QzL9HuH0BqKZisXtFPz8SYLv7Ulyj1GNYnUfBBa6SnZAQ+wU4L4u3laGm7Ww==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/netlify-lambda/-/netlify-lambda-1.5.1.tgz#723f83494bd3f2fd1681d0a9c5db3df571c70074"
+  integrity sha512-i8Sd47KKUtlNziEZlwJjoE5p9gQMt8PM+NS/bimMe9lFiOoZWliSUAk2yIGsQqLCT1uxFIFFmMM99M5LuKfdJw==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.0.0"
