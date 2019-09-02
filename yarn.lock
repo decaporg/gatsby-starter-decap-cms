@@ -6242,9 +6242,9 @@ gatsby-plugin-netlify-cms@^4.1.6:
     webpack "^4.39.3"
 
 gatsby-plugin-netlify@^2.0.6:
-  version "2.1.10"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.1.10.tgz#299064ed82984bc2c11dd5ab08474a818dd462bd"
-  integrity sha512-ApB1+y/rYGbMy6lSwgam0hHDj5TmCSQWMG2n4MaV8VwtW+p9JOxwf6zWquhzasSrjnwWSKCkYmWf1DMKsqyh1g==
+  version "2.1.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.1.11.tgz#b77a0244915f75510e3d74c40b4b7351e41521ac"
+  integrity sha512-tg74OTwcCwh21ksMU4fYEmjRm5B9699f9r9Ad41gWvyJenHrgASLA9ZrxvTnAkp7x18ur+LYo5MMgTb0jSlb+A==
   dependencies:
     "@babel/runtime" "^7.5.5"
     fs-extra "^8.1.0"
