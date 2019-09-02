@@ -6337,9 +6337,9 @@ gatsby-remark-copy-linked-files@^2.0.7:
     unist-util-visit "^1.4.1"
 
 gatsby-remark-images@^3.1.6:
-  version "3.1.19"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.19.tgz#1ad1493cb9dbd7b1917895d73fd2ddd30edb98af"
-  integrity sha512-18vu9FqbfzV38UFdraSuYYamF3JL0Dwy7kS3MJuRuWuhSOeD7X2D0icYKaqhKPfL1370dd5zE1xaWVXxbS43eQ==
+  version "3.1.20"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.20.tgz#faaa0c4f3a1ceceed56203aff94eec868937a5a2"
+  integrity sha512-r+92NfzKU22en0jy3Jat7MfuHwYo1x3RO4PF/QIjeL2CbMFQhn/5NCXJcjL+wzCCv75AyHYiaqWQqd0mxbc99g==
   dependencies:
     "@babel/runtime" "^7.5.5"
     chalk "^2.4.2"
@@ -6348,7 +6348,7 @@ gatsby-remark-images@^3.1.6:
     lodash "^4.17.15"
     mdast-util-definitions "^1.2.4"
     potrace "^2.1.2"
-    query-string "^6.8.2"
+    query-string "^6.8.3"
     slash "^3.0.0"
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
@@ -11894,10 +11894,10 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-query-string@^6.8.2:
-  version "6.8.2"
-  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.2.tgz#36cb7e452ae11a4b5e9efee83375e0954407b2f6"
-  integrity sha512-J3Qi8XZJXh93t2FiKyd/7Ec6GNifsjKXUsVFkSBj/kjLsDylWhnCz4NT1bkPcKotttPW+QbKGqqPH8OoI2pdqw==
+query-string@^6.8.3:
+  version "6.8.3"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.3.tgz#fd9fb7ffb068b79062b43383685611ee47777d4b"
+  integrity sha512-llcxWccnyaWlODe7A9hRjkvdCKamEKTh+wH8ITdTc3OhchaqUZteiSCX/2ablWHVrkVIe04dntnaZJ7BdyW0lQ==
   dependencies:
     decode-uri-component "^0.2.0"
     split-on-first "^1.0.0"
