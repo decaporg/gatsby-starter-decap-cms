@@ -1,3 +1,3 @@
 {
-  "extends": ["github>netlify-templates/netlify-cms-renovate-config"]
+  "extends": ["github>netlify/renovate-config:netlify-cms-starter"]
 }
