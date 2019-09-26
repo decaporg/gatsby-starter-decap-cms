@@ -40,6 +40,7 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
 
 ### Access Locally
 
+Pulldown a local copy of the Github repository Netlify created for you, with the name you specified in the previous step
 ```
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
@@ -103,6 +104,8 @@ npm install --global --production windows-build-tools
 ```
 
 [Full details here](https://www.npmjs.com/package/node-gyp 'NPM node-gyp page')
+
+MacOS users might also encounter some errors, for more info check [node-gyp](https://github.com/nodejs/node-gyp). We recommend using the latest stable node version.
 
 ## Purgecss
 

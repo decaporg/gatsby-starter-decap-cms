@@ -11,7 +11,7 @@ please read the [code of conduct](CODE_OF_CONDUCT.md).
 
 > Only required on the first run, subsequent runs can use `yarn` to both
 bootstrap and run the development server using `yarn develop`.
-Since this starter using the [netlify-lambda](https://github.com/netlify/netlify-lambda), there could be further issues you, please check the [Readme](https://github.com/netlify/netlify-lambda) for further information and set up questions. 
+Since this starter using the [netlify-dev](https://www.netlify.com/products/dev/#how-it-works), there could be further issues you, please check the [netlify-dev](https://github.com/netlify/netlify-dev) repository for further information and set up questions. 
 
 ```sh
 $ git clone https://github.com/netlify-templates/gatsby-starter-netlify-cms
@@ -20,19 +20,10 @@ $ yarn
 
 ## Available scripts
 
-### `start`
-
-Starts the development server. This task runs both the `start:app` and `start:lambda` scripts.
-
-#### Usage
-
-```sh
-$ yarn start
-```
 
 ### `build`
 
-Build the static files into the `public` folder, turns lambda functions into a deployable form. This task runs both the `build:app` and `build:lambda` scripts.
+Build the static files into the `public` folder, turns lambda functions into a deployable form. 
 
 #### Usage
 
@@ -42,7 +33,7 @@ $ yarn build
 
 ### `clean`
 
-Removes all the files from `public`, `.cache` directories using the `rimraf` command.
+Runs `gatsby clean` command.
 
 #### Usage
 
@@ -50,26 +41,24 @@ Removes all the files from `public`, `.cache` directories using the `rimraf` com
 yarn clean
 ```
 
-### `develop`
+### `netlify dev`
 
-Runs the `clean` script and starts the gatsby develop server using the command `gatsby develop`. Since this is not starting the lambda server it can be used when you only changing the site and not the lambda functions.
+Starts the netlify dev environment, including the gatsby dev environment.
+For more infor check the [Netlify Dev Docs](https://github.com/netlify/cli/blob/master/docs/netlify-dev.md)
+
+```sh
+netlify dev
+```
+
+### `develop` or `start`
+
+Runs the `clean` script and starts the gatsby develop server using the command `gatsby develop`. We recomend using this command when you don't need Netlify specific features
 
 #### Usage
 
 ```sh
 yarn develop
 ```
-
-### `serve`
-
-This command is shorthand for `gatsby serve` 
-
-#### Usage
-
-```sh
-yarn serve
-```
-
 ### `test`
 
 Not implmented yet
@@ -88,46 +77,6 @@ Formats code and docs according to our style guidelines using `prettier`
 
 ```sh
 yarn format
-```
-
-### `start:app`
-
-Runs the `develop` command, this mapping is needed so we can start both gatsby and lambda with one command (`yarn start`).
-
-#### Usage
-
-```sh
-yarn start:app
-```
-
-### `start:lambda`
-
-Runs the `netlify-lambda` command, starts the lambda server in develop mode.
-
-#### Usage
-
-```sh
-yarn start:lambda
-```
-
-### `build:app`
-
-Builds the gatsby app
-
-#### Usage
-
-```sh
-yarn build:app
-```
-
-### `build:lambda`
-
-Runs the `netlify-lambda build` command, compiles the functions.
-
-#### Usage
-
-```sh
-yarn build:lambda
 ```
 
 
