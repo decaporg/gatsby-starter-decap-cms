@@ -19,6 +19,7 @@ collections:
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "pages"
