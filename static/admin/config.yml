@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: feature/test-branch
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
