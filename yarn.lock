@@ -8256,7 +8256,7 @@ jpeg-js@^0.3.4:
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.3.6.tgz#c40382aac9506e7d1f2d856eb02f6c7b2a98b37c"
   integrity sha512-MUj2XlMB8kpe+8DJUGH/3UJm4XpI8XEgZQ+CiHDeyrGoKPdW/8FJv6ku+3UiYm5Fz3CWaL+iXmD8Q4Ap6aC1Jw==
 
-jquery@>=1.10.2:
+jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
@@ -9618,10 +9618,10 @@ netlify-cms-media-library-cloudinary@^1.3.2:
   resolved "https://registry.yarnpkg.com/netlify-cms-media-library-cloudinary/-/netlify-cms-media-library-cloudinary-1.3.4.tgz#ef8aa18ff85d4f1957a5ce4ca89799cda3334ec1"
   integrity sha512-ujVXy1nhvYISf6Fs/UGgCWEchbEHlrpkBpwFfVdGyOpKanimmVRlqceMPzsLJbnmB2STCPWCG7vOnmvd0hZ7kw==
 
-netlify-cms-media-library-uploadcare@^0.5.2:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/netlify-cms-media-library-uploadcare/-/netlify-cms-media-library-uploadcare-0.5.4.tgz#56e16f227956feb135f2f2f37ffe9936775a6940"
-  integrity sha512-BnpP5uA8pJXPHID7kUrZJEz8PC2cK5R7areaA1L1z2o3A0WIrso4De8cKnJ4KJX0WpIdNTd/OEbioh33K6+WLQ==
+netlify-cms-media-library-uploadcare@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/netlify-cms-media-library-uploadcare/-/netlify-cms-media-library-uploadcare-0.5.5.tgz#295e0f5d01c0029df9e5ec03649c76a2f92fc12f"
+  integrity sha512-+pH6UKXD7nuF+WUX3C/Tk0X0vcKHndl4vZJQCdojqtk+PrOBk3VXri5XJkJd2xFUtksdprCRaKPvB2RKbuolEQ==
   dependencies:
     uploadcare-widget "^3.7.0"
     uploadcare-widget-tab-effects "^1.4.0"
@@ -14859,11 +14859,11 @@ uploadcare-widget-tab-effects@^1.4.0:
   integrity sha512-83Nu4w1rmWnQWpD14cM5HczmpZX326MwQbhVhfBhDt9mQtd2PxOCZbgaxq03YP6Cbrs87U6V1IokP7UkJRjcfw==
 
 uploadcare-widget@^3.7.0:
-  version "3.7.9"
-  resolved "https://registry.yarnpkg.com/uploadcare-widget/-/uploadcare-widget-3.7.9.tgz#0967e46a5ecb70abec74be5480f8acbdefbb531f"
-  integrity sha512-lV9EXc/1sKRbrV+RQYzMIz50dFyUxL6M59xLtJhZscMCDEUwHZMVawSv1YHGxKcuWF0Tbrilkklik5TkbD8nlA==
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/uploadcare-widget/-/uploadcare-widget-3.8.0.tgz#4a505689ba8d2ec79f7d1879da3d4459294b9d67"
+  integrity sha512-Mgd8L9OVryWifg7nlbm3c1xO6XgBHtuiVkwHkoAy9TivrFItwFvDXC7aAI7mwNJ0umB+URw4/1qJ3Xu9PEbkVw==
   dependencies:
-    jquery ">=1.10.2"
+    jquery "^3.4.1"
 
 upper-case@^1.1.1:
   version "1.1.3"
