@@ -9321,9 +9321,9 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
 netlify-cms-app@^2.9.6:
-  version "2.11.19"
-  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.11.19.tgz#8b2a6d2ab0f7d4d33266a9ae22ab0c710349ab01"
-  integrity sha512-ARl9MsqAiYbFC88vTwHZH1jLVAaJKLkgDaCjRuxrYuIxZo3yXsYdO7WcSLFdGFfjB1jOf38+kyJLHeEvu1hmqg==
+  version "2.11.20"
+  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.11.20.tgz#2fbc12129d6c9ac8e96b6823b6202749152614ea"
+  integrity sha512-AwK2uN8BDJLFSD9Iy2QVK2ASNWxMotWFEqlez/INoMWWVSx93JD1ZENPYHCcxFxJcFl8Ax6rWmBy8KiY/CDOzA==
   dependencies:
     "@emotion/core" "^10.0.9"
     "@emotion/styled" "^10.0.9"
@@ -9332,7 +9332,7 @@ netlify-cms-app@^2.9.6:
     moment "^2.24.0"
     netlify-cms-backend-bitbucket "^2.9.0"
     netlify-cms-backend-git-gateway "^2.7.2"
-    netlify-cms-backend-github "^2.7.0"
+    netlify-cms-backend-github "^2.7.1"
     netlify-cms-backend-gitlab "^2.6.0"
     netlify-cms-backend-test "^2.7.2"
     netlify-cms-core "^2.18.4"
@@ -9344,12 +9344,12 @@ netlify-cms-app@^2.9.6:
     netlify-cms-widget-boolean "^2.3.0"
     netlify-cms-widget-code "^1.1.3"
     netlify-cms-widget-date "^2.4.0"
-    netlify-cms-widget-datetime "^2.2.5"
+    netlify-cms-widget-datetime "^2.2.6"
     netlify-cms-widget-file "^2.6.2"
     netlify-cms-widget-image "^2.6.2"
     netlify-cms-widget-list "^2.4.3"
     netlify-cms-widget-map "^1.3.3"
-    netlify-cms-widget-markdown "^2.9.1"
+    netlify-cms-widget-markdown "^2.9.2"
     netlify-cms-widget-number "^2.3.5"
     netlify-cms-widget-object "^2.3.1"
     netlify-cms-widget-relation "^2.5.2"
@@ -9380,10 +9380,10 @@ netlify-cms-backend-git-gateway@^2.7.2:
     jwt-decode "^2.2.0"
     minimatch "^3.0.4"
 
-netlify-cms-backend-github@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms-backend-github/-/netlify-cms-backend-github-2.7.0.tgz#f1f00fc336f436cadfdd679617afb6ef6bb94bc3"
-  integrity sha512-+cjXn+2rPlA09UjJjUaCmGiV5eo+GxrUJ4jA4X0ffK41SOAv90OTL50Exa7fBRNZ4jdN1vyCPDkwMQeQzhIjEQ==
+netlify-cms-backend-github@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/netlify-cms-backend-github/-/netlify-cms-backend-github-2.7.1.tgz#c3d73eeabc49dc9a3a6eee96d3e74939fe8cb584"
+  integrity sha512-1FV/CwiclNNm6pdIHy+YaVtuV04SrWrJ0qItWe9KIRm20bCr9ad6VYA9yT7tpZQeDPx6AlkiMsnmf3twORPALw==
   dependencies:
     apollo-cache-inmemory "^1.6.2"
     apollo-client "^2.6.3"
@@ -9523,10 +9523,10 @@ netlify-cms-widget-date@^2.4.0:
   dependencies:
     react-datetime "^2.16.3"
 
-netlify-cms-widget-datetime@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/netlify-cms-widget-datetime/-/netlify-cms-widget-datetime-2.2.5.tgz#a030a09299d2448dc181b31224d55fd76074b893"
-  integrity sha512-zoCuqkcelNvBwKlv5tJll67rKXFE/tq1W6SlT/f0LbRR78X/CY7jSTuTKbawHYi4XAg4Hhc4NmgKX2C8AWm39g==
+netlify-cms-widget-datetime@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/netlify-cms-widget-datetime/-/netlify-cms-widget-datetime-2.2.6.tgz#a5d4b88d96e902439f21156f612f6df510f28edc"
+  integrity sha512-6hOGEyx+V1gc/88cVEHR29FZQPyYuEk8p0Kg0dsWO/KHspJkzwv0jI91Mad4ATTQD8hBUHKm1adTp6fwcWTQVw==
 
 netlify-cms-widget-file@^2.6.2:
   version "2.6.2"
@@ -9554,10 +9554,10 @@ netlify-cms-widget-map@^1.3.3:
   dependencies:
     ol "^5.3.1"
 
-netlify-cms-widget-markdown@^2.9.1:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-widget-markdown/-/netlify-cms-widget-markdown-2.9.1.tgz#57aafa3635cc226b08b8762422477ccd85b5dfc5"
-  integrity sha512-zgOkmuOgC74Bd1wytYA5KE6qDOOasQi8E/x8VpEzUz6ym1kWnpAmU8Q2QzMthiNadcpS3TCUxny0md6Zfoqh+A==
+netlify-cms-widget-markdown@^2.9.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/netlify-cms-widget-markdown/-/netlify-cms-widget-markdown-2.9.2.tgz#b14725c4be4af1b68091588fcf33525bf9687d1c"
+  integrity sha512-FYmXKlYKS86VR+MstHloQUvgUVvvDqEIS3/v8ob8zQjXXw8K1XbDvEzTJD3yrhbZq3pzomlbyC1yM5UYQ1HA9A==
   dependencies:
     is-hotkey "^0.1.4"
     mdast-util-definitions "^1.2.3"
