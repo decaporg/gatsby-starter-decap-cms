@@ -9559,9 +9559,9 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
 netlify-cms-app@^2.9.6:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.12.1.tgz#67af22fa5be6870e577ccc4d4dc834b7e3ab9feb"
-  integrity sha512-RP8P7sGlH3HkXz6D8rkC4uvQXt3bGcoeEVL4+xercArqR4LmT9+aS9pL7kCjJ/NWM6RPUNmgqAYNNZSZ3GgM/w==
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.12.2.tgz#6e002a4533921d5baa4d60da8e72d5c7c18644bd"
+  integrity sha512-iNGTvZpDV4IvEILjy6IizO+j3VZFjfGdmmew5DVH3qWbEDcwTpU2iAU570lradiFjwHc30ruj9o2BK4c11QTQQ==
   dependencies:
     "@emotion/core" "^10.0.9"
     "@emotion/styled" "^10.0.9"
@@ -9570,13 +9570,13 @@ netlify-cms-app@^2.9.6:
     moment "^2.24.0"
     netlify-cms-backend-bitbucket "^2.11.3"
     netlify-cms-backend-git-gateway "^2.10.2"
-    netlify-cms-backend-github "^2.10.2"
+    netlify-cms-backend-github "^2.10.3"
     netlify-cms-backend-gitlab "^2.8.3"
     netlify-cms-backend-test "^2.8.1"
-    netlify-cms-core "^2.23.1"
+    netlify-cms-core "^2.23.2"
     netlify-cms-editor-component-image "^2.6.2"
     netlify-cms-lib-auth "^2.2.8"
-    netlify-cms-lib-util "^2.9.1"
+    netlify-cms-lib-util "^2.9.2"
     netlify-cms-locales "^1.10.2"
     netlify-cms-ui-default "^2.9.5"
     netlify-cms-widget-boolean "^2.3.0"
@@ -9618,10 +9618,10 @@ netlify-cms-backend-git-gateway@^2.10.2:
     jwt-decode "^2.2.0"
     minimatch "^3.0.4"
 
-netlify-cms-backend-github@^2.10.2:
-  version "2.10.2"
-  resolved "https://registry.yarnpkg.com/netlify-cms-backend-github/-/netlify-cms-backend-github-2.10.2.tgz#bf7d2673732f89ad541ea6c5ee64ad7bc91cbbf4"
-  integrity sha512-CmIQ0+6CR+ZT7ku6lrHiautYtNay2lwR/TUGKRzkNsICl080Bl6JvpQf8k3Wp9NJudCIqGjPSUknVuGG+S5pDw==
+netlify-cms-backend-github@^2.10.3:
+  version "2.10.3"
+  resolved "https://registry.yarnpkg.com/netlify-cms-backend-github/-/netlify-cms-backend-github-2.10.3.tgz#e5661c03e66f8310045bd7e032bb24ef4a5096dd"
+  integrity sha512-6xqqGt3R/r9/Wt/nQ+Y/lkGyqnJB0bgNbUpNi9NZpWPm4lJsBhe9qFQ+4ocUfThXQjqZlxRmI+H4/gajng1ESQ==
   dependencies:
     apollo-cache-inmemory "^1.6.2"
     apollo-client "^2.6.3"
@@ -9646,10 +9646,10 @@ netlify-cms-backend-test@^2.8.1:
   resolved "https://registry.yarnpkg.com/netlify-cms-backend-test/-/netlify-cms-backend-test-2.8.1.tgz#9898dbea05496b4e44e65ed6d426564064aa217a"
   integrity sha512-2/dQn6zfFElTsOXSGeqlmH9wEwNVs1kWNfOR9T9ZOMqsiHzzXflL/ZHbVBqJjdN7jHbv0l5BlKIgLBM5ntmluA==
 
-netlify-cms-core@^2.23.1:
-  version "2.23.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-core/-/netlify-cms-core-2.23.1.tgz#e4f20735e80c6a34ee41d652551311a4ba88f19c"
-  integrity sha512-x3pgElstKzPlpRRSr77GcPCAcoHxz6LmZGhwX7vHj40e1DO2mX1j7r2zuf9jrHykZxKeEZNzzwIdNlV3axc9Dg==
+netlify-cms-core@^2.23.2:
+  version "2.23.2"
+  resolved "https://registry.yarnpkg.com/netlify-cms-core/-/netlify-cms-core-2.23.2.tgz#d81ba0e6b8957f3a52a4fd8bb130056e819cba40"
+  integrity sha512-3gq28QOe5/PxCInErlxLmyqN9gKUR9MiUmCjb61JQDsmk/TIgjkUJfPkmVBjXvA9pU0Ed+be5i1ExNs+8xXyfg==
   dependencies:
     "@iarna/toml" "2.2.3"
     ajv "^6.10.0"
@@ -9706,10 +9706,10 @@ netlify-cms-lib-auth@^2.2.8:
   resolved "https://registry.yarnpkg.com/netlify-cms-lib-auth/-/netlify-cms-lib-auth-2.2.8.tgz#6949e0ba4f0010c3bf4e58e1d47c2548a79f19cc"
   integrity sha512-c5guwoa9dsGhzMbOxI1lMGaeKizpRW0FzEZGyQemdw4ig2OrIdM0cbZ3Fq5Dr9HVzi+lXSJ05+u7z8qJI8RvyA==
 
-netlify-cms-lib-util@^2.9.1:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-lib-util/-/netlify-cms-lib-util-2.9.1.tgz#d0ada3b9091513e1a7dae562fa86b22116d5afbd"
-  integrity sha512-4bbNVPt6vNvofreZGOC1Pv2WYpMtSMhPzAkto9I6qi7eDl8pKh0me0hnejewM0+gdiwO/8MbNc2QklI/9GlILg==
+netlify-cms-lib-util@^2.9.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/netlify-cms-lib-util/-/netlify-cms-lib-util-2.9.2.tgz#6cb1535fdb8da4b41e55edbcf41d45adf04451cb"
+  integrity sha512-QeaLXh8Jn7ihwCVVsUeJpc7g/WQGGsQg/MGwphKfecTEOGG975Kte8QU4WtgLqIB+DaUNR/NDgitYlY62zEjOw==
   dependencies:
     js-sha256 "^0.9.0"
     localforage "^1.7.3"
