@@ -5,30 +5,30 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.8.0",
-    "gatsby": "^2.13.31",
-    "gatsby-image": "^2.0.23",
-    "gatsby-plugin-netlify": "^2.0.6",
-    "gatsby-plugin-netlify-cms": "^4.1.6",
-    "gatsby-plugin-purgecss": "^4.0.0",
-    "gatsby-plugin-react-helmet": "^3.0.4",
-    "gatsby-plugin-sass": "^2.0.7",
-    "gatsby-plugin-sharp": "^2.2.9",
-    "gatsby-remark-copy-linked-files": "^2.0.7",
-    "gatsby-remark-images": "^3.1.6",
+    "gatsby": "^2.20.35",
+    "gatsby-image": "^2.3.5",
+    "gatsby-plugin-netlify": "^2.2.4",
+    "gatsby-plugin-netlify-cms": "^4.2.5",
+    "gatsby-plugin-purgecss": "^5.0.0",
+    "gatsby-plugin-react-helmet": "^3.2.5",
+    "gatsby-plugin-sass": "^2.2.4",
+    "gatsby-plugin-sharp": "^2.5.7",
+    "gatsby-remark-copy-linked-files": "^2.2.4",
+    "gatsby-remark-images": "^3.2.6",
     "gatsby-remark-relative-images": "^0.3.0",
-    "gatsby-source-filesystem": "^2.0.26",
-    "gatsby-transformer-remark": "^2.6.9",
-    "gatsby-transformer-sharp": "^2.1.9",
+    "gatsby-source-filesystem": "^2.2.5",
+    "gatsby-transformer-remark": "^2.7.5",
+    "gatsby-transformer-sharp": "^2.4.7",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms-app": "^2.9.6",
     "netlify-cms-media-library-cloudinary": "^1.3.2",
     "netlify-cms-media-library-uploadcare": "^0.5.2",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.14.0",
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0",
+    "react-helmet": "^6.0.0",
     "uuid": "^7.0.0"
   },
   "keywords": [
@@ -45,6 +45,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.15.3"
+    "prettier": "^2.0.5"
   }
 }
