@@ -1984,15 +1984,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*":
+"@types/node@*", "@types/node@>=6":
   version "14.0.14"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.14.tgz#24a0b5959f16ac141aeb0c5b3cd7a15b7c64cbce"
   integrity sha512-syUgf67ZQpaJj01/tRTknkMNoBBLWJOBODF0Zm4NrXmiSuxjymFrxnTu1QVYRubhVkRcZLYZG8STTwJRdVm/WQ==
-
-"@types/node@>=6":
-  version "14.0.13"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
-  integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
 
 "@types/node@^8.5.7":
   version "8.10.61"
@@ -9357,9 +9352,9 @@ jquery@^3.4.1:
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
 
 js-base64@^2.1.8, js-base64@^2.5.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.6.1.tgz#c328374225d2e65569791ded73c258e2c59334c7"
-  integrity sha512-G5x2saUTupU9D/xBY9snJs3TxvwX8EkpLFiYlPpDt/VmMHOXprnSU1nxiTmFbijCX4BLF/cMRIfAcC5BiMYgFQ==
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.6.2.tgz#cf9301bc5cc756892a9a6c8d7138322e5944fb0d"
+  integrity sha512-1hgLrLIrmCgZG+ID3VoLNLOSwjGnoZa8tyrUdEteMeIzsT6PH7PMLyUvbDwzNE56P3PNxyvuIOx4Uh2E5rzQIw==
 
 js-sha256@^0.9.0:
   version "0.9.0"
@@ -15987,9 +15982,9 @@ uploadcare-widget-tab-effects@^1.4.0:
   integrity sha512-FgHMdVIP8vzgGC772wZTkkh0yN94X+hkZ5uBEdZQlRucOXobyryvPEp2hRJ4wNMt7RLubXVS8WafzEnH6iQX7A==
 
 uploadcare-widget@^3.7.0:
-  version "3.9.2"
-  resolved "https://registry.yarnpkg.com/uploadcare-widget/-/uploadcare-widget-3.9.2.tgz#47e75200ea74d753bd8e9275c0f43d986d9358f5"
-  integrity sha512-JLLoQG6hwVoUbVwFjAucMD/rHSJvrAC/m31iFiI7WkuP9z5torP6LXvbgMV2249Sfj4Qtts4QOp6fYpf4bj7wg==
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/uploadcare-widget/-/uploadcare-widget-3.10.0.tgz#3629566aceceb67c0e1a3dcbd137e711423689b7"
+  integrity sha512-IvsoYFBG3GWROo0RAp5G1uQveBm1OsyCaNiZIgczCYrcuZtp1Ic+uYQow9eyD1oAMfSKgPMXcKS7LvQcU9e9OQ==
   dependencies:
     escape-html "^1.0.3"
     jquery "^3.4.1"
