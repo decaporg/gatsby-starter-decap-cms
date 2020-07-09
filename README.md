@@ -11,7 +11,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 ## Features
 
 - A simple landing page with blog functionality built with Netlify CMS
-- Editabe Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
+- Editable Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
 - Create Blog posts from Netlify CMS
 - Tags: Separate page for posts under each tag
 - Basic directory organization
