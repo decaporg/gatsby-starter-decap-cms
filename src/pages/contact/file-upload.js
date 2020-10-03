@@ -13,8 +13,8 @@ function encode(data) {
 }
 
 export default class Contact extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {}
   }
 
