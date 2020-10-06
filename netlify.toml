@@ -9,3 +9,5 @@
 
 [[plugins]]
 package = "netlify-plugin-nimbella"
+[plugins.inputs]
+functions = "functions" 
