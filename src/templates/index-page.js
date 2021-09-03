@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          !!image.childImageSharp ? image.childImageSharp.gatsbyImageData.src : image
         })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
@@ -154,40 +154,35 @@ IndexPage.propTypes = {
 
 export default IndexPage;
 
-export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
+export const pageQuery = graphql`query IndexPageTemplate {
+  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+    frontmatter {
+      title
+      image {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      heading
+      subheading
+      mainpitch {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+        description
+      }
+      description
+      intro {
+        blurbs {
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
             }
           }
+          text
         }
         heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
+}
 `;

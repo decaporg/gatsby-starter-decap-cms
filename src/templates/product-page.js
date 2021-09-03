@@ -23,7 +23,7 @@ export const ProductPageTemplate = ({
       className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          !!image.childImageSharp ? image.childImageSharp.gatsbyImageData.src : image
         })`,
       }}
     >
@@ -86,7 +86,7 @@ export const ProductPageTemplate = ({
                 style={{
                   backgroundImage: `url(${
                     fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
+                      ? fullImage.childImageSharp.gatsbyImageData.src
                       : fullImage
                   })`,
                 }}
@@ -158,90 +158,77 @@ ProductPage.propTypes = {
 
 export default ProductPage;
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+export const productPageQuery = graphql`query ProductPage($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    frontmatter {
+      title
+      image {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      heading
+      description
+      intro {
+        blurbs {
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
             }
           }
+          text
         }
         heading
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+      }
+      main {
+        heading
+        description
+        image1 {
+          alt
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
             }
-            text
           }
-          heading
+        }
+        image2 {
+          alt
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+            }
+          }
+        }
+        image3 {
+          alt
+          image {
+            childImageSharp {
+              gatsbyImageData(quality: 72, layout: FULL_WIDTH)
+            }
+          }
+        }
+      }
+      testimonials {
+        author
+        quote
+      }
+      full_image {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
+      }
+      pricing {
+        heading
+        description
+        plans {
           description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
+          items
+          plan
+          price
         }
       }
     }
   }
+}
 `;
