@@ -10794,10 +10794,10 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-netlify-cms-app@^2.15.47:
-  version "2.15.47"
-  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.15.47.tgz#4180b72c1559a25de82de62595d95062daddc270"
-  integrity sha512-U4PP5phcRGekuXmlGqv2VBHcLTCc4E/qfy3+tzlkNyRkML1z3M33BoDu/zuwklEJXsdN0QUWm46nkeOs7/aMMg==
+netlify-cms-app@^2.15.48:
+  version "2.15.48"
+  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.15.48.tgz#6935e8738aaf5783e24f562fff7356075197f20d"
+  integrity sha512-pU7186RBuQ0mO66YXmW+MQonqVkxcY3dCrfA726kCTtj+6TtV9fLQsH8Gwu5La+YNAjCpNDjTP4lSvyGpXlwXA==
   dependencies:
     "@emotion/core" "^10.0.35"
     "@emotion/styled" "^10.0.27"
@@ -10817,7 +10817,7 @@ netlify-cms-app@^2.15.47:
     netlify-cms-lib-auth "^2.4.2"
     netlify-cms-lib-util "^2.13.3"
     netlify-cms-lib-widgets "^1.6.3"
-    netlify-cms-locales "^1.36.0"
+    netlify-cms-locales "^1.36.1"
     netlify-cms-ui-default "^2.15.2"
     netlify-cms-widget-boolean "^2.4.1"
     netlify-cms-widget-code "^1.3.3"
@@ -10978,10 +10978,10 @@ netlify-cms-lib-widgets@^1.6.3:
   resolved "https://registry.yarnpkg.com/netlify-cms-lib-widgets/-/netlify-cms-lib-widgets-1.6.3.tgz#06bd3c364b1552a9640815e3ca0d72b56faf1544"
   integrity sha512-/35bTvzuEOEOLeY+gQkgBMUu4NQz2gf3ItITUZtBNIbHhN0z6RiGtqVPmQu2PPcqzQXf+IUbhr2VVLUN6a/tpg==
 
-netlify-cms-locales@^1.36.0:
-  version "1.36.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms-locales/-/netlify-cms-locales-1.36.0.tgz#4658be5cc5675f3062d283b4ba8b3955710ed7a9"
-  integrity sha512-XJ0KNGpg9BT/Qgm8UhghQdEK5/S07IkeJ9/h8w6x3bQpQj3O3k+aA2Tb8rCMzNQeBo81MWjufdtZNLeUsL8cSw==
+netlify-cms-locales@^1.36.1:
+  version "1.36.1"
+  resolved "https://registry.yarnpkg.com/netlify-cms-locales/-/netlify-cms-locales-1.36.1.tgz#06ab0818b09522e74451830fc9c21d008c9b5924"
+  integrity sha512-B6xZViNKozvVOVPOwQO6mvkNoQYbq+D+tAf2zQ9Sn8BI3odPgqaEbt9u1N9JyBmEAakHDsmMzscSsDYBN7hL+w==
 
 netlify-cms-media-library-cloudinary@^1.3.10:
   version "1.3.10"
