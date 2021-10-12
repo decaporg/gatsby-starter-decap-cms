@@ -27,7 +27,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 ## Prerequisites
 
 - Node (I recommend using v8.2.0 or higher)
-- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
+- [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/)
 - [Netlify CLI](https://github.com/netlify/cli)
 
 ## Getting Started (Recommended)
