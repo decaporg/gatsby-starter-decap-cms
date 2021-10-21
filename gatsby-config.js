@@ -9,7 +9,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        indentedSyntax: true,
+        sassOptions: {
+          indentedSyntax: true,
+        }
       },
     },
     {
