@@ -29,7 +29,7 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
     "sass": "^1.43.2",
-    "uuid": "^7.0.0"
+    "uuid": "^8.0.0"
   },
   "keywords": [
     "gatsby"
