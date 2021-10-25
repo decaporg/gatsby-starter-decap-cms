@@ -21,12 +21,7 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <Hero
-        height={400}
-        img={heroImage}
-        title={title}
-        subheading={subheading}
-      />
+      <Hero img={heroImage} title={title} subheading={subheading} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">

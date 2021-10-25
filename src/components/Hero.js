@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function Hero(props) {
-  const { height, img, title, subheading } = props;
+  const { height, img, title, subheading, imgPosition } = props;
 
   return (
     <div
@@ -17,7 +17,7 @@ export default function Hero(props) {
       <GatsbyImage
         image={img}
         objectFit={"cover"}
-        objectPosition={"top left"}
+        objectPosition={imgPosition}
         style={{
           gridArea: "1/1",
           // You can set a maximum height for the image, if you wish.
@@ -82,4 +82,9 @@ Hero.propTypes = {
   title: PropTypes.string,
   height: PropTypes.number,
   subheading: PropTypes.string,
+};
+
+Hero.defaultProps = {
+  height: 400,
+  imgPositon: "top left",
 };
