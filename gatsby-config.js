@@ -11,7 +11,7 @@ module.exports = {
       options: {
         sassOptions: {
           indentedSyntax: true,
-        },
+        }
       },
     },
     {
