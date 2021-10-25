@@ -1,11 +1,12 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import {GatsbyImage, getImage} from 'gatsby-plugin-image'
+import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
+import Hero from "../components/Hero";
 
 export const IndexPageTemplate = ({
   image,
@@ -15,60 +16,17 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-}) => { 
-
+}) => {
   const heroImage = getImage(image);
-  
+
   return (
     <div>
-      <div
-        className="margin-top-0"
-        style={{
-          display: 'grid',
-          alignItems: 'center',
-        }}
-      >
-        <GatsbyImage objectFit={"cover"} objectPosition={"top left"} style={{ gridArea: "1/1", maxHeight: "400px"}} image={heroImage} alt="" />
-        <div
-          style={{
-            gridArea: "1/1",
-            display: "grid",
-            position: "relative",
-            height: "150px",
-            lineHeight: "1",
-            placeItems: 'center',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-            style={{
-              boxShadow:
-                "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-              backgroundColor: "rgb(255, 68, 0)",
-              color: "white",
-              lineHeight: "1",
-              padding: "0.25em",
-            }}
-          >
-            {title}
-          </h1>
-          <h3
-            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-            style={{
-              boxShadow:
-                "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-              backgroundColor: "rgb(255, 68, 0)",
-              color: "white",
-              lineHeight: "1",
-              padding: "0.25em",
-            }}
-          >
-            {subheading}
-          </h3>
-        </div>
-      </div>
+      <Hero
+        height={400}
+        img={heroImage}
+        title={title}
+        subheading={subheading}
+      />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -118,7 +76,7 @@ export const IndexPageTemplate = ({
       </section>
     </div>
   );
-}
+};
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -160,35 +118,36 @@ IndexPage.propTypes = {
 
 export default IndexPage;
 
-export const pageQuery = graphql`query IndexPageTemplate {
-  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
-    frontmatter {
-      title
-      image {
-        childImageSharp {
-          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-        }
-      }
-      heading
-      subheading
-      mainpitch {
+export const pageQuery = graphql`
+  query IndexPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
         title
-        description
-      }
-      description
-      intro {
-        blurbs {
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-            }
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
-          text
         }
         heading
+        subheading
+        mainpitch {
+          title
+          description
+        }
         description
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+              }
+            }
+            text
+          }
+          heading
+          description
+        }
       }
     }
   }
-}
 `;
