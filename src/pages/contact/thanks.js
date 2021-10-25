@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../../components/Layout";
 
-export default () => (
+const Thanks = () => (
   <Layout>
     <section className="section">
       <div className="container">
@@ -13,3 +13,4 @@ export default () => (
     </section>
   </Layout>
 );
+export default Thanks;

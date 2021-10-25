@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
-class BlogRoll extends React.Component {
+class BlogRollTemplate extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
@@ -25,6 +25,12 @@ class BlogRoll extends React.Component {
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          width:
+                            post.frontmatter.featuredimage.childImageSharp
+                              .gatsbyImageData.width,
+                          height:
+                            post.frontmatter.featuredimage.childImageSharp
+                              .gatsbyImageData.height,
                         }}
                       />
                     </div>
@@ -66,36 +72,43 @@ BlogRoll.propTypes = {
   }),
 };
 
-export default () => (
-  <StaticQuery
-    query={graphql`query BlogRollQuery {
-  allMarkdownRemark(
-    sort: {order: DESC, fields: [frontmatter___date]}
-    filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
-  ) {
-    edges {
-      node {
-        excerpt(pruneLength: 400)
-        id
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          templateKey
-          date(formatString: "MMMM DD, YYYY")
-          featuredpost
-          featuredimage {
-            childImageSharp {
-              gatsbyImageData(width: 120, quality: 100, layout: CONSTRAINED)
+export default function BlogRoll() {
+  return (
+    <StaticQuery
+      query={graphql`
+        query BlogRollQuery {
+          allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          ) {
+            edges {
+              node {
+                excerpt(pruneLength: 400)
+                id
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                  templateKey
+                  date(formatString: "MMMM DD, YYYY")
+                  featuredpost
+                  featuredimage {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 120
+                        quality: 100
+                        layout: CONSTRAINED
+                      )
+                    }
+                  }
+                }
+              }
             }
           }
         }
-      }
-    }
-  }
+      `}
+      render={(data, count) => <BlogRollTemplate data={data} count={count} />}
+    />
+  );
 }
-`}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
-  />
-);

@@ -9,7 +9,7 @@ import Pricing from "../components/Pricing";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Hero from "../components/Hero";
 
-export const ProductPageTemplate = ({
+const ProductPageTemplate = ({
   image,
   title,
   heading,

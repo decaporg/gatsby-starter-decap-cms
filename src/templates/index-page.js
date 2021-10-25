@@ -8,7 +8,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import Hero from "../components/Hero";
 
-export const IndexPageTemplate = ({
+const IndexPageTemplate = ({
   image,
   title,
   heading,
