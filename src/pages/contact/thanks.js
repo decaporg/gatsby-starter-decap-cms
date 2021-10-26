@@ -1,7 +1,7 @@
-import React from "react";
-import Layout from "../../components/Layout";
+import React from 'react'
+import Layout from '../../components/Layout'
 
-const Thanks = () => (
+export default () => (
   <Layout>
     <section className="section">
       <div className="container">
@@ -12,5 +12,4 @@ const Thanks = () => (
       </div>
     </section>
   </Layout>
-);
-export default Thanks;
+)
