@@ -3,7 +3,13 @@ import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function Hero(props) {
-  const { height, img, title, subheading, imgPosition } = props;
+  const {
+    height = 400,
+    img,
+    title,
+    subheading,
+    imgPosition = "top left",
+  } = props;
 
   return (
     <div
@@ -82,9 +88,4 @@ Hero.propTypes = {
   title: PropTypes.string,
   height: PropTypes.number,
   subheading: PropTypes.string,
-};
-
-Hero.defaultProps = {
-  height: 400,
-  imgPositon: "top left",
 };
