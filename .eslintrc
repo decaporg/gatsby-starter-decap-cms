@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "wesbos"
+  ],
+  "rules": {
+    "react/no-danger": 0,
+    "react/destructuring-assignment": 0
+  }
+}

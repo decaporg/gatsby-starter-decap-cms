@@ -1,34 +1,37 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
-import Layout from '../../components/Layout'
+import React from 'react';
+// this is example code, for reference, if you would like to
+// use this example, you will need to install gatsby-link
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { navigate } from 'gatsby-link';
+import Layout from '../../components/Layout';
 
 function encode(data) {
-  const formData = new FormData()
+  const formData = new FormData();
 
   for (const key of Object.keys(data)) {
-    formData.append(key, data[key])
+    formData.append(key, data[key]);
   }
 
-  return formData
+  return formData;
 }
 
 export default class Contact extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
 
   handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   handleAttachment = (e) => {
-    this.setState({ [e.target.name]: e.target.files[0] })
-  }
+    this.setState({ [e.target.name]: e.target.files[0] });
+  };
 
   handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
+    e.preventDefault();
+    const form = e.target;
     fetch('/', {
       method: 'POST',
       body: encode({
@@ -37,8 +40,8 @@ export default class Contact extends React.Component {
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error))
-  }
+      .catch((error) => alert(error));
+  };
 
   render() {
     return (
@@ -64,17 +67,17 @@ export default class Contact extends React.Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'name'}>
+                  <label className="label" htmlFor="name">
                     Your name
                   </label>
                   <div className="control">
                     <input
                       className="input"
-                      type={'text'}
-                      name={'name'}
+                      type="text"
+                      name="name"
                       onChange={this.handleChange}
-                      id={'name'}
-                      required={true}
+                      id="name"
+                      required
                     />
                   </div>
                 </div>
@@ -103,6 +106,6 @@ export default class Contact extends React.Component {
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 }

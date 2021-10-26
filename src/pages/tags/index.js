@@ -1,8 +1,9 @@
-import React from 'react'
-import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
-import { Link, graphql } from 'gatsby'
-import Layout from '../../components/Layout'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { kebabCase } from 'lodash';
+import { Helmet } from 'react-helmet';
+import { Link, graphql } from 'gatsby';
+import Layout from '../../components/Layout';
 
 const TagsPage = ({
   data: {
@@ -36,9 +37,16 @@ const TagsPage = ({
       </div>
     </section>
   </Layout>
-)
-
-export default TagsPage
+);
+TagsPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.object,
+    site: {
+      siteMetadata: PropTypes.object,
+    },
+  }),
+};
+export default TagsPage;
 
 export const tagPageQuery = graphql`
   query TagsQuery {
@@ -54,4 +62,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`
+`;

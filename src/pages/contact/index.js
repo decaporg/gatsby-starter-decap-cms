@@ -1,26 +1,29 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
-import Layout from '../../components/Layout'
+import React from 'react';
+// this is example code, for reference, if you would like to
+// use this example, you will need to install gatsby-link
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { navigate } from 'gatsby-link';
+import Layout from '../../components/Layout';
 
 function encode(data) {
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
 }
 
 export default class Index extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { isValidated: false }
+    super(props);
+    this.state = { isValidated: false };
   }
 
   handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
+    e.preventDefault();
+    const form = e.target;
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -30,8 +33,8 @@ export default class Index extends React.Component {
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error))
-  }
+      .catch((error) => alert(error));
+  };
 
   render() {
     return (
@@ -57,46 +60,46 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'name'}>
+                  <label className="label" htmlFor="name">
                     Your name
                   </label>
                   <div className="control">
                     <input
                       className="input"
-                      type={'text'}
-                      name={'name'}
+                      type="text"
+                      name="name"
                       onChange={this.handleChange}
-                      id={'name'}
-                      required={true}
+                      id="name"
+                      required
                     />
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'email'}>
+                  <label className="label" htmlFor="email">
                     Email
                   </label>
                   <div className="control">
                     <input
                       className="input"
-                      type={'email'}
-                      name={'email'}
+                      type="email"
+                      name="email"
                       onChange={this.handleChange}
-                      id={'email'}
-                      required={true}
+                      id="email"
+                      required
                     />
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'message'}>
+                  <label className="label" htmlFor="message">
                     Message
                   </label>
                   <div className="control">
                     <textarea
                       className="textarea"
-                      name={'message'}
+                      name="message"
                       onChange={this.handleChange}
-                      id={'message'}
-                      required={true}
+                      id="message"
+                      required
                     />
                   </div>
                 </div>
@@ -110,6 +113,6 @@ export default class Index extends React.Component {
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 }
