@@ -21,8 +21,10 @@ export const ProductPageTemplate = ({
   fullImage,
   pricing,
 }) => {
-  const heroImage = getImage(image);
-  const fullWidthImage = getImage(fullImage);
+  const heroImage = getImage(image) || image;
+  // TODO: Investigate why the fullImage is a string whereas the image is a full object
+  const fullWidthImage = getImage(fullImage) || fullImage;
+
   return (
     <div className="content">
       <Hero img={heroImage} title={title} />
@@ -124,6 +126,9 @@ ProductPageTemplate.propTypes = {
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
+  console.log("====silly")
+  console.log(frontmatter)
+
   return (
     <Layout>
       <ProductPageTemplate
@@ -157,6 +162,11 @@ export const productPageQuery = graphql`
       frontmatter {
         title
         image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        full_image {
           childImageSharp {
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
@@ -206,11 +216,6 @@ export const productPageQuery = graphql`
         testimonials {
           author
           quote
-        }
-        full_image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
         }
         pricing {
           heading

@@ -20,22 +20,25 @@ export default function Hero(props) {
       }}
     >
       {/* You can use a GatsbyImage component if the image is dynamic */}
-      <GatsbyImage
-        image={img}
-        objectFit={"cover"}
-        objectPosition={imgPosition}
-        style={{
-          gridArea: "1/1",
-          // You can set a maximum height for the image, if you wish.
-          maxHeight: height,
-        }}
-        layout="fullWidth"
-        // You can optionally force an aspect ratio for the generated image
-        aspectratio={3 / 1}
-        // This is a presentational image, so the alt should be an empty string
-        alt=""
-        formats={["auto", "webp", "avif"]}
-      />
+      {/* TODO add styles to the img tag to replicate the backgroundImage effect */}
+      {img?.url ? ( <img src={img.url} alt="" />) : (
+        <GatsbyImage
+          image={img}
+          objectFit={"cover"}
+          objectPosition={imgPosition}
+          style={{
+            gridArea: "1/1",
+            // You can set a maximum height for the image, if you wish.
+            maxHeight: height,
+          }}
+          layout="fullWidth"
+          // You can optionally force an aspect ratio for the generated image
+          aspectratio={3 / 1}
+          // This is a presentational image, so the alt should be an empty string
+          alt=""
+          formats={["auto", "webp", "avif"]}
+        />
+      )}
       <div
         style={{
           // By using the same grid area for both, they are stacked on top of each other
