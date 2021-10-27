@@ -9,7 +9,8 @@ import Pricing from "../components/Pricing";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Hero from "../components/Hero";
 
-const ProductPageTemplate = ({
+// eslint-disable-next-line
+export const ProductPageTemplate = ({
   image,
   title,
   heading,

@@ -8,7 +8,8 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import Hero from "../components/Hero";
 
-const IndexPageTemplate = ({
+// eslint-disable-next-line
+export const IndexPageTemplate = ({
   image,
   title,
   heading,
