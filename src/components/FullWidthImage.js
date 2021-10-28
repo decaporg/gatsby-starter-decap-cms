@@ -39,7 +39,7 @@ export default function FullWidthImage(props) {
           formats={["auto", "webp", "avif"]}
         />
       )}
-     {(!title || !subheading )&& <div
+     {(title || subheading )&& <div
         style={{
           // By using the same grid area for both, they are stacked on top of each other
           gridArea: "1/1",
