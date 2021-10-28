@@ -39,7 +39,7 @@ export default function Hero(props) {
           formats={["auto", "webp", "avif"]}
         />
       )}
-      <div
+     {(!title || !subheading )&& <div
         style={{
           // By using the same grid area for both, they are stacked on top of each other
           gridArea: "1/1",
@@ -81,7 +81,7 @@ export default function Hero(props) {
             {subheading}
           </h3>
         )}
-      </div>
+      </div>}
     </div>
   );
 }

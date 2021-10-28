@@ -22,7 +22,6 @@ export const ProductPageTemplate = ({
   pricing,
 }) => {
   const heroImage = getImage(image) || image;
-  // TODO: Investigate why the fullImage is a string whereas the image is a full object
   const fullWidthImage = getImage(fullImage) || fullImage;
 
   return (
@@ -41,7 +40,7 @@ export const ProductPageTemplate = ({
             </div>
             <div className="columns">
               <div className="column is-10 is-offset-1">
-                <Features gridItems={intro.blurbs} />
+                <Features gridItems={intro.blurbs} /> 
                 <div className="columns">
                   <div className="column is-7">
                     <h3 className="has-text-weight-semibold is-size-3">
@@ -77,9 +76,7 @@ export const ProductPageTemplate = ({
           </div>
         </div>
       </section>
-
       <Hero img={fullWidthImage} imgPosition={"bottom"} />
-
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -126,9 +123,6 @@ ProductPageTemplate.propTypes = {
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
-  console.log("====silly")
-  console.log(frontmatter)
-
   return (
     <Layout>
       <ProductPageTemplate
@@ -162,11 +156,6 @@ export const productPageQuery = graphql`
       frontmatter {
         title
         image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
-        full_image {
           childImageSharp {
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
@@ -216,6 +205,12 @@ export const productPageQuery = graphql`
         testimonials {
           author
           quote
+        }
+
+        full_image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
         }
         pricing {
           heading
