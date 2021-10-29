@@ -10,7 +10,7 @@ export default function FullWidthImage(props) {
     subheading,
     imgPosition = "top left",
   } = props;
-  
+
   return (
     <React.Fragment>
       <div
@@ -20,7 +20,7 @@ export default function FullWidthImage(props) {
           alignItems: "center",
         }}
       >
-      {img?.url ? 
+        {img?.url ? (
           <img
             src={img}
             objectFit={"cover"}
@@ -29,7 +29,7 @@ export default function FullWidthImage(props) {
               gridArea: "1/1",
               // You can set a maximum height for the image, if you wish.
               height: height,
-              width: "100%"
+              width: "100%",
             }}
             // You can optionally force an aspect ratio for the generated image
             aspectratio={3 / 1}
@@ -37,26 +37,26 @@ export default function FullWidthImage(props) {
             alt=""
             formats={["auto", "webp", "avif"]}
           />
-         : 
-         <GatsbyImage
-          image={img}
-          objectFit={"cover"}
-          objectPosition={imgPosition}
-          style={{
-            gridArea: "1/1",
-            // You can set a maximum height for the image, if you wish.
-            maxHeight: height,
-          }}
-          layout="fullWidth"
-          // You can optionally force an aspect ratio for the generated image
-          aspectratio={3 / 1}
-          // This is a presentational image, so the alt should be an empty string
-          alt=""
-          formats={["auto", "webp", "avif"]}
-        />
-      }
-        {
-          (title || subheading )&& <div
+        ) : (
+          <GatsbyImage
+            image={img}
+            objectFit={"cover"}
+            objectPosition={imgPosition}
+            style={{
+              gridArea: "1/1",
+              // You can set a maximum height for the image, if you wish.
+              maxHeight: height,
+            }}
+            layout="fullWidth"
+            // You can optionally force an aspect ratio for the generated image
+            aspectratio={3 / 1}
+            // This is a presentational image, so the alt should be an empty string
+            alt=""
+            formats={["auto", "webp", "avif"]}
+          />
+        )}
+        {(title || subheading) && (
+          <div
             style={{
               // By using the same grid area for both, they are stacked on top of each other
               gridArea: "1/1",
@@ -82,27 +82,27 @@ export default function FullWidthImage(props) {
                 {title}
               </h1>
             )}
-        {subheading && (
-          <h3
-            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-            style={{
-              boxShadow:
-                "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-              backgroundColor: "rgb(255, 68, 0)",
-              color: "white",
-              lineHeight: "1",
-              padding: "0.25rem",
-              marginTop: "0.5rem",
-            }}
-          >
-            {subheading}
-          </h3>
+            {subheading && (
+              <h3
+                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+                style={{
+                  boxShadow:
+                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+                  backgroundColor: "rgb(255, 68, 0)",
+                  color: "white",
+                  lineHeight: "1",
+                  padding: "0.25rem",
+                  marginTop: "0.5rem",
+                }}
+              >
+                {subheading}
+              </h3>
+            )}
+          </div>
         )}
       </div>
-      }
-    </div>
     </React.Fragment>
-    )
+  );
 }
 
 FullWidthImage.propTypes = {
