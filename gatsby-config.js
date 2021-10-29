@@ -11,7 +11,7 @@ module.exports = {
       options: {
         sassOptions: {
           indentedSyntax: true,
-        }
+        },
       },
     },
     {
@@ -36,6 +36,7 @@ module.exports = {
         name: "images",
       },
     },
+    `gatsby-plugin-image`,
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
