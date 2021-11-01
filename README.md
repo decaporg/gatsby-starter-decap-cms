@@ -15,12 +15,12 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Create Blog posts from Netlify CMS
 - Tags: Separate page for posts under each tag
 - Basic directory organization
-- Uses Bulma for styling, but size is reduced by `purge-css-plugin`
+- Uses Bulma for styling, but size is reduced by `gatsy-plugin-purgecss`
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
-- Uses `gatsby-image` with Netlify-CMS preview support
+- Uses `gatsby-plugin-image` with Netlify-CMS preview support
 - Separate components for everything
 - Netlify deploy configuration
-- Netlify function support, see `lambda` folder
+- Netlify function support, see `netlify/functions` folder
 - Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
 - ..and more
 
@@ -49,7 +49,7 @@ $ yarn
 $ netlify dev # or ntl dev
 ```
 
-This uses the new [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=blog&utm_medium=netlifycms&utm_campaign=devex) CLI feature to serve any functions you have in the `lambda` folder.
+This uses [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=blog&utm_medium=netlifycms&utm_campaign=devex) CLI feature to serve any functions you have in the `netlify/functions` folder.
 
 To test the CMS locally, you'll need to run a production build of the site:
 
@@ -100,12 +100,16 @@ yarn remove netlify-cms-media-library-cloudinary
 $ gatsby new [SITE_DIRECTORY_NAME] https://github.com/netlify-templates/gatsby-starter-netlify-cms/
 $ cd [SITE_DIRECTORY_NAME]
 $ npm run build
-$ npm run serve
+$ npm run start
 ```
 
 ### Setting up the CMS
 
-Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
+Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting for production.
+
+If you want use Netlify CMS locally, run the site in one terminal with `npm run start` and in another
+Terminal you can use `npx netlify-cms-proxy-server` which proxy requests so you'll be automatically logged
+in as a user on [http:localhost:3000/admin](http:localhost:3000/admin).
 
 ## Debugging
 
