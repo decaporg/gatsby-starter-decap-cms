@@ -113,7 +113,7 @@ in as a user on [http:localhost:3000/admin](http:localhost:3000/admin).
 
 ## Debugging
 
-Windows users might encounter `node-gyp` errors when trying to npm install.
+Windows users, who aren't using [WSL](https://docs.microsoft.com/en-us/windows/wsl/about), might encounter `node-gyp` errors when trying to npm install.
 To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
 
 ```
@@ -121,9 +121,9 @@ npm config set python python2.7
 npm install --global --production windows-build-tools
 ```
 
-[Full details here](https://www.npmjs.com/package/node-gyp "NPM node-gyp page")
+[Full details here](https://www.npmjs.com/package/node-gyp "NPM node-gyp page").
 
-MacOS users might also encounter some errors, for more info check [node-gyp](https://github.com/nodejs/node-gyp). We recommend using the latest stable node version.
+MacOS and WSL users who might also encounter some errors, check [node-gyp](https://github.com/nodejs/node-gyp) for more info. We recommend using the latest stable node version.
 
 ## Purgecss
 
