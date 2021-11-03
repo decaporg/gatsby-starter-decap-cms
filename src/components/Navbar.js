@@ -21,8 +21,6 @@ const Navbar = () => {
           <button
             className={`navbar-burger burger ${isActive && "is-active"}`}
             aria-expanded={isActive}
-            tabIndex={0}
-            onKeyPress={() => setIsActive(!isActive)}
             onClick={() => setIsActive(!isActive)}
           >
             <span />
