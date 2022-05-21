@@ -72,7 +72,6 @@ BlogRoll.propTypes = {
   }),
 }
 
-
 export default function BlogRoll() {
   return (
     <StaticQuery
@@ -101,7 +100,6 @@ export default function BlogRoll() {
                         quality: 100
                         layout: CONSTRAINED
                       )
-
                     }
                   }
                 }
@@ -112,5 +110,5 @@ export default function BlogRoll() {
       `}
       render={(data, count) => <BlogRollTemplate data={data} count={count} />}
     />
-  );
+  )
 }
