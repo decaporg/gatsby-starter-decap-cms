@@ -1,18 +1,18 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from "react";
+import { Link } from "gatsby";
+import github from "../img/github-icon.svg";
+import logo from "../img/logo.svg";
 
 const Navbar = class extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       active: false,
-      navBarActiveClass: '',
-    }
+      navBarActiveClass: "",
+    };
   }
 
-  toggleHamburger = () => {
+  toggleHamburger() {
     // toggle the active boolean in the state
     this.setState(
       {
@@ -23,13 +23,13 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: "is-active",
             })
           : this.setState({
-              navBarActiveClass: '',
-            })
+              navBarActiveClass: "",
+            });
       }
-    )
+    );
   }
 
   render() {
@@ -42,12 +42,15 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
             </Link>
             {/* Hamburger menu */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
+              role="menuitem"
+              tabIndex={0}
+              onKeyPress={() => this.toggleHamburger()}
               onClick={() => this.toggleHamburger()}
             >
               <span />
@@ -91,8 +94,8 @@ const Navbar = class extends React.Component {
           </div>
         </div>
       </nav>
-    )
+    );
   }
-}
+};
 
-export default Navbar
+export default Navbar;

@@ -1,6 +1,7 @@
-import React from 'react'
-import Layout from '../../components/Layout'
+import React from "react";
+import Layout from "../../components/Layout";
 
+// eslint-disable-next-line
 export default () => (
   <Layout>
     <section className="section">
@@ -12,4 +13,4 @@ export default () => (
       </div>
     </section>
   </Layout>
-)
+);
