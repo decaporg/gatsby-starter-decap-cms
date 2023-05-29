@@ -1,0 +1,36 @@
+// This file imports and customizes the Bulma CSS framework.
+// https://bulma.io/documentation/customize/with-node-sass/
+
+// This file is processed by a Gatsby plugin called Purgecss, which removes unused
+// CSS to optimize the bundle. This behavior can be customized in gatsby-config.js.
+// https://www.gatsbyjs.com/plugins/gatsby-plugin-purgecss/
+// WARNING: Sometimes it mistakenly removes needed styles. You can reduce your
+// risk of confusion and bugs by doing any custom styling in a separate file.
+
+@import ./variables.sass
+
+//Menu overrides
+$menu-item-color: $white-ter
+$menu-item-hover-color: $black !important
+$menu-item-hover-background-color: $black
+$menu-item-active-color: $kaldi-red-invert
+$menu-item-active-background-color:	$kaldi-red-invert
+$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-label-color: $white-ter
+
+// Import bulma only after the variables have been customized.
+@import "~bulma"
+
+
+// responsiveness
++tablet-only
+  .blog-list-item .featured-thumbnail
+    flex-basis: 50%
+
++mobile
+  .blog-list-item header
+    display: block
+  .blog-list-item .featured-thumbnail
+    text-align: center
+    max-width: 70%
+    margin: 0 0 1em
