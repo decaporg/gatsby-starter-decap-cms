@@ -8,14 +8,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar is-transparent"
-      role="navigation"
-      aria-label="main-navigation"
+      className='navbar is-transparent'
+      role='navigation'
+      aria-label='main-navigation'
     >
-      <div className="container">
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item" title="Logo">
-            <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
+      <div className='container'>
+        <div className='navbar-brand'>
+          <Link to='/' className='navbar-item' title='Logo'>
+            <img src={logo} alt='Kaldi' style={{ width: "88px" }} />
           </Link>
           {/* Hamburger menu */}
           <button
@@ -28,45 +28,53 @@ const Navbar = () => {
             <span />
           </button>
         </div>
-        <ul id="navMenu" className={` navbar-start has-text-centered navbar-menu ${isActive && "is-active"}`}>
-            {/* TODO: inline override of padding is a result of refactoring
+        <ul
+          id='navMenu'
+          className={` navbar-start has-text-centered navbar-menu ${
+            isActive && "is-active "
+          }`}
+        >
+          {/* TODO: inline override of padding is a result of refactoring
                 to a ul for accessibilty purposes, would like to see a css
                 re-write that makes this unneccesary.
              */}
-            <li className="navbar-item" style={{padding: "0px"}}>
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-            </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/products">
+          <li className='navbar-item' style={{ padding: "0px" }}>
+            <Link
+              className={`navbar-item navbar-hover`}
+              to='/about'
+            >
+              About
+            </Link>
+          </li>
+          <li className='navbar-item' style={{ padding: "0px" }}>
+            <Link className='navbar-item navbar-hover' to='/products'>
               Products
             </Link>
-            </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/blog">
+          </li>
+          <li className='navbar-item' style={{ padding: "0px" }}>
+            <Link className='navbar-item navbar-hover' to='/blog'>
               Blog
             </Link>
-            </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/contact">
+          </li>
+          <li className='navbar-item' style={{ padding: "0px" }}>
+            <Link className='navbar-item navbar-hover' to='/contact'>
               Contact
             </Link>
-            </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/contact/examples">
+          </li>
+          <li className='navbar-item navbar-hover' style={{ padding: "0px" }}>
+            <Link className='navbar-item navbar-hover' to='/contact/examples'>
               Form Examples
             </Link>
-            </li>
-          <li className="navbar-end has-text-centered">
+          </li>
+          <li className='navbar-end has-text-centered'>
             <a
-              className="navbar-item"
-              href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-              target="_blank"
-              rel="noopener noreferrer"
+              className='navbar-item'
+              href='https://github.com/netlify-templates/gatsby-starter-netlify-cms'
+              target='_blank'
+              rel='noopener noreferrer'
             >
-              <span className="icon">
-                <img src={github} alt="Github" />
+              <span className='icon icon-hover '>
+                <img src={github} alt='Github' />
               </span>
             </a>
           </li>

@@ -17,6 +17,10 @@ $menu-item-active-color: $kaldi-red-invert
 $menu-item-active-background-color:	$kaldi-red-invert
 $menu-list-border-left: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
+$navbar-item-hover-background-color:#FD461E
+$icon-hover-background-color:#FD461E
+$is-active-hover-color:$black
+
 
 // Import bulma only after the variables have been customized.
 @import "~bulma"
@@ -26,7 +30,7 @@ $menu-label-color: $white-ter
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%
-
+    
 +mobile
   .blog-list-item header
     display: block
@@ -34,3 +38,6 @@ $menu-label-color: $white-ter
     text-align: center
     max-width: 70%
     margin: 0 0 1em
+
+  .nav-item
+    color: $black
