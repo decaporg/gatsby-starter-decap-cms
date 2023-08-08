@@ -7,3 +7,6 @@ public/
 static/admin/*.bundle.*
 .DS_Store
 yarn-error.log
+
+# Local Netlify folder
+.netlify
