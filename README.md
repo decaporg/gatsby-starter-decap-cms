@@ -64,8 +64,8 @@ Media Libraries have been included in this starter as a default. If you are not 
 
 ```javascript
 import CMS from "decap-cms-app";
-// import uploadcare from 'netlify-cms-media-library-uploadcare'
-// import cloudinary from 'netlify-cms-media-library-cloudinary'
+// import uploadcare from 'decap-cms-media-library-uploadcare'
+// import cloudinary from 'decap-cms-media-library-cloudinary'
 
 import AboutPagePreview from "./preview-templates/AboutPagePreview";
 import BlogPostPreview from "./preview-templates/BlogPostPreview";
@@ -85,13 +85,13 @@ Note: Don't forget to also remove them from `package.json` and `yarn.lock` / `pa
 Example:
 
 ```
-yarn remove netlify-cms-media-library-uploadcare
+yarn remove decap-cms-media-library-uploadcare
 ```
 
 OR
 
 ```
-yarn remove netlify-cms-media-library-cloudinary
+yarn remove decap-cms-media-library-cloudinary
 ```
 
 ## Getting Started (Without Netlify)
